@@ -1,0 +1,11 @@
+:root {
+  /* Paleta oficial EUZEBIO v1.0 */
+  --color-paper-warm: #FAF6F0;
+  --color-charcoal-deep: #1E242C;
+  --color-slate-blue: #2F4660;
+  --color-forest-green: #3E5A4B;
+
+  /* Tipografia definida na especificação; as fontes locais são fallbacks. */
+  --font-heading: "Poppins", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
