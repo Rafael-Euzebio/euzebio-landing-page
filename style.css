@@ -1,0 +1,38 @@
+body {
+  font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: var(--font-heading);
+}
+
+header,
+#inicio {
+  background-color: var(--color-paper-warm);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header nav ul {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0;
+  list-style: none;
+}
