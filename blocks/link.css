@@ -1,10 +1,12 @@
 .link {
   color: var(--color-charcoal-deep);
   text-decoration: none;
+  transition: text-decoration-color 180ms ease;
 }
 
 .link:hover {
   text-decoration: underline;
+  text-decoration-thickness: 3px;
 }
 
 .link:focus-visible {
@@ -13,5 +15,61 @@
 }
 
 .link--navigation {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  line-height: 1.25;
+  text-decoration: none;
   white-space: nowrap;
+}
+
+.link--navigation::after {
+  position: absolute;
+  right: 0;
+  bottom: var(--navbar-underline-offset, -1rem);
+  left: 0;
+  height: 3px;
+  background-color: currentColor;
+  content: "";
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 180ms ease;
+}
+
+.link--navigation:hover::after,
+.link--navigation:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.link--navigation:hover {
+  text-decoration: none;
+}
+
+.link--button {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--color-charcoal-deep);
+  border-radius: 0.25rem;
+  background-color: var(--color-charcoal-deep);
+  color: var(--color-paper-warm);
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+.link--button::after {
+  content: none;
+}
+
+.link--button:hover {
+  background-color: var(--color-paper-warm);
+  color: var(--color-charcoal-deep);
+  text-decoration: none;
+}
+
+.link--button:active {
+  background-color: var(--color-charcoal-deep);
+  color: var(--color-paper-warm);
+}
+
+.link--button:focus-visible {
+  outline-color: var(--color-charcoal-deep);
 }

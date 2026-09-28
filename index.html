@@ -13,21 +13,25 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="tokens.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="blocks/navbar.css">
     <link rel="stylesheet" href="blocks/link.css">
 
     <!-- Atualize o endereço quando o domínio definitivo estiver publicado. -->
     <link rel="canonical" href="https://euzebio.xyz/">
   </head>
   <body>
-    <header>
-      <a class="link link--brand" href="/" aria-label="Rafael Euzebio — página inicial">EUZEBIO</a>
+    <header class="navbar">
+      <a class="link link--brand navbar__brand" href="/" aria-label="Rafael Euzebio — página inicial">
+        <img class="navbar__mark" src="assets/brand/euzebio-mark-deep-coal.png" alt="" aria-hidden="true">
+        <img class="navbar__wordmark" src="assets/brand/wordmark-deep-coal.png" alt="" aria-hidden="true">
+      </a>
 
-      <nav aria-label="Navegação principal">
-        <ul>
-          <li><a class="link link--navigation" href="#inicio">Início</a></li>
-          <li><a class="link link--navigation" href="#como-trabalho">Como trabalho</a></li>
-          <li><a class="link link--navigation" href="#casos">Casos</a></li>
-          <li><a class="link link--navigation" href="#contato">Conversar</a></li>
+      <nav class="navbar__menu" aria-label="Navegação principal">
+        <ul class="navbar__list">
+          <li class="navbar__item"><a class="link link--navigation" href="#inicio">Início</a></li>
+          <li class="navbar__item"><a class="link link--navigation" href="#como-trabalho">Como trabalho</a></li>
+          <li class="navbar__item"><a class="link link--navigation" href="#casos">Casos</a></li>
+          <li class="navbar__item"><a class="link link--navigation link--button" href="#contato">Vamos Conversar</a></li>
         </ul>
       </nav>
     </header>

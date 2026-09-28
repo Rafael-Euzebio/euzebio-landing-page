@@ -62,10 +62,6 @@ a {
   text-decoration: none;
 }
 
-a:visited {
-  color: inherit;
-}
-
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
