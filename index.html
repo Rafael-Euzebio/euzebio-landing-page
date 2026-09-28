@@ -13,20 +13,21 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="tokens.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="blocks/link.css">
 
     <!-- Atualize o endereço quando o domínio definitivo estiver publicado. -->
     <link rel="canonical" href="https://euzebio.xyz/">
   </head>
   <body>
     <header>
-      <a href="/" aria-label="Rafael Euzebio — página inicial">EUZEBIO</a>
+      <a class="link link--brand" href="/" aria-label="Rafael Euzebio — página inicial">EUZEBIO</a>
 
       <nav aria-label="Navegação principal">
         <ul>
-          <li><a href="#inicio">Início</a></li>
-          <li><a href="#como-trabalho">Como trabalho</a></li>
-          <li><a href="#casos">Casos</a></li>
-          <li><a href="#contato">Conversar</a></li>
+          <li><a class="link link--navigation" href="#inicio">Início</a></li>
+          <li><a class="link link--navigation" href="#como-trabalho">Como trabalho</a></li>
+          <li><a class="link link--navigation" href="#casos">Casos</a></li>
+          <li><a class="link link--navigation" href="#contato">Conversar</a></li>
         </ul>
       </nav>
     </header>
@@ -36,8 +37,8 @@
         <h1 id="titulo-principal">Quando operação e tecnologia não se encaixam, eu ajudo a encontrar o problema e colocar a solução para funcionar.</h1>
         <p>Trabalho com pequenos negócios e equipes que precisam entender o que está travando uma entrega, organizar prioridades e implantar melhorias em processos, ferramentas e sistemas.</p>
         <p>
-          <a href="#contato">Conte o que está acontecendo</a>
-          <a href="#casos">Veja os casos</a>
+          <a class="link link--primary" href="#contato">Conte o que está acontecendo</a>
+          <a class="link link--secondary" href="#casos">Veja os casos</a>
         </p>
       </section>
 
@@ -80,13 +81,13 @@
       <section id="contato" aria-labelledby="contato-titulo">
         <h2 id="contato-titulo">Vamos conversar?</h2>
         <p>O primeiro contato serve para entender o contexto e avaliar qual pode ser o próximo passo.</p>
-        <p><a href="mailto:rafael@euzebio.xyz">rafael@euzebio.xyz</a></p>
+        <p><a class="link link--contact" href="mailto:rafael@euzebio.xyz">rafael@euzebio.xyz</a></p>
       </section>
     </main>
 
     <footer>
       <p>&copy; <time datetime="2026">2026</time> Rafael Euzebio</p>
-      <address><a href="mailto:rafael@euzebio.xyz">rafael@euzebio.xyz</a></address>
+      <address><a class="link link--contact" href="mailto:rafael@euzebio.xyz">rafael@euzebio.xyz</a></address>
     </footer>
   </body>
 </html>
