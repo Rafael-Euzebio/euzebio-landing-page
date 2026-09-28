@@ -1,10 +1,9 @@
 .link {
   color: var(--color-charcoal-deep);
   text-decoration: none;
-  transition: text-decoration-color 180ms ease;
 }
 
-.link:hover {
+.link:not(.link--navigation):hover {
   text-decoration: underline;
   text-decoration-thickness: 3px;
 }
@@ -24,10 +23,10 @@
   white-space: nowrap;
 }
 
-.link--navigation::after {
+.link--navigation:not(.link--button)::after {
   position: absolute;
   right: 0;
-  bottom: var(--navbar-underline-offset, -1rem);
+  bottom: -2.5rem;
   left: 0;
   height: 3px;
   background-color: currentColor;
@@ -37,13 +36,9 @@
   transition: transform 180ms ease;
 }
 
-.link--navigation:hover::after,
-.link--navigation:focus-visible::after {
+.link--navigation:not(.link--button):hover::after,
+.link--navigation:not(.link--button):focus-visible::after {
   transform: scaleX(1);
-}
-
-.link--navigation:hover {
-  text-decoration: none;
 }
 
 .link--button {
@@ -55,14 +50,9 @@
   transition: background-color 180ms ease, color 180ms ease;
 }
 
-.link--button::after {
-  content: none;
-}
-
 .link--button:hover {
   background-color: var(--color-paper-warm);
   color: var(--color-charcoal-deep);
-  text-decoration: none;
 }
 
 .link--button:active {
@@ -72,4 +62,11 @@
 
 .link--button:focus-visible {
   outline-color: var(--color-charcoal-deep);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .link--navigation::after,
+  .link--button {
+    transition: none;
+  }
 }

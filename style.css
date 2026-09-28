@@ -17,7 +17,3 @@ select,
 textarea {
   font-family: var(--font-heading);
 }
-
-#inicio {
-  background-color: var(--color-paper-warm);
-}
