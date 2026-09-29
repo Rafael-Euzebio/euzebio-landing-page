@@ -1,0 +1,65 @@
+.cases {
+  min-height: 100svh;
+  padding-top: clamp(6rem, 15vh, 12rem);
+  padding-bottom: clamp(6rem, 15vh, 12rem);
+  padding-right: var(--page-gutter);
+  padding-left: var(--page-gutter);
+  background-color: var(--color-forest-green);
+  color: var(--color-paper-warm);
+}
+
+.cases__title {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  font-size: var(--font-size-heading-medium);
+  line-height: 1.2;
+}
+
+.cases__description {
+  margin-top: 1.5rem;
+  font-size: var(--font-size-lead);
+}
+
+.cases__list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2.5rem 1.5rem;
+  margin-top: 3rem;
+  padding: 0;
+  list-style: none;
+}
+
+.cases__number {
+  font-size: var(--font-size-lead);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.cases__number::after {
+  display: block;
+  width: 5rem;
+  height: 1px;
+  margin-top: 0.375rem;
+  background-color: currentColor;
+  content: "";
+}
+
+/* Corresponde ao token --breakpoint-wide: 64em em tokens.css. */
+@media (max-width: 64em) {
+  .cases__list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Corresponde ao token --breakpoint-compact: 40em em tokens.css. */
+@media (max-width: 40em) {
+  .cases {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .cases__list {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,12 +1,25 @@
 .link {
+  --link-underline-thickness: 3px;
   color: var(--color-charcoal-deep);
   font-size: var(--font-size-link);
   text-decoration: none;
 }
 
+.link--underline-thin {
+  --link-underline-thickness: 1px;
+}
+
+.link--underline-offset-large {
+  text-underline-offset: 0.5rem;
+}
+
+.link--paper {
+  color: var(--color-paper-warm);
+}
+
 .link:not(.link--underlined):not(.link--button):hover {
   text-decoration: underline;
-  text-decoration-thickness: 3px;
+  text-decoration-thickness: var(--link-underline-thickness);
 }
 
 .link:focus-visible {

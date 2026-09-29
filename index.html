@@ -14,8 +14,10 @@
     <link rel="stylesheet" href="tokens.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="blocks/hero.css">
+    <link rel="stylesheet" href="blocks/cases.css">
     <link rel="stylesheet" href="blocks/navbar.css">
     <link rel="stylesheet" href="blocks/link.css">
+    <link rel="stylesheet" href="blocks/case-card.css">
     <link rel="stylesheet" href="blocks/menu.css">
 
     <!-- Atualize o endereço quando o domínio definitivo estiver publicado. -->
@@ -78,14 +80,41 @@
         <p>Processos, ferramentas, sistemas, dados, sites e automações podem fazer parte do caminho, conforme a necessidade.</p>
       </section>
 
-      <section id="casos" aria-labelledby="casos-titulo">
-        <h2 id="casos-titulo">Casos selecionados</h2>
-        <p>Em breve, exemplos de trabalho com contexto, contribuição e evidências.</p>
-        <!-- Substitua estes itens por links para páginas de casos publicados. -->
-        <ul>
-          <li>Continuidade de operação no varejo</li>
-          <li>Coordenação de uma entrega digital</li>
-          <li>Desenho de currículo técnico de SQL</li>
+      <section id="casos" class="cases" aria-labelledby="casos-titulo">
+        <h2 id="casos-titulo" class="cases__title">
+          <span class="cases__number" aria-hidden="true">02</span>
+          Casos selecionados
+        </h2>
+        <p class="cases__description">Projetos e intervenções que mostram, na prática, como eu trabalho.</p>
+        <!-- Destinos provisórios; atualizar quando as páginas de caso forem publicadas. -->
+        <ul class="cases__list">
+          <li class="cases__item">
+            <article class="case-card">
+              <figure class="case-card__image" aria-hidden="true"></figure>
+              <p class="case-card__category">Operação</p>
+              <h3 class="case-card__title">Continuidade da operação</h3>
+              <p class="case-card__description">Exemplo ilustrativo de análise da rotina, das dependências e dos pontos que podem interromper o trabalho.</p>
+              <a class="link link--paper link--underline-thin link--underline-offset-large case-card__link" href="casos/operacao.html">Ver caso --&gt;</a>
+            </article>
+          </li>
+          <li class="cases__item">
+            <article class="case-card">
+              <figure class="case-card__image" aria-hidden="true"></figure>
+              <p class="case-card__category">Atendimento</p>
+              <h3 class="case-card__title">Organização do atendimento</h3>
+              <p class="case-card__description">Exemplo ilustrativo de análise do fluxo de solicitações e das passagens entre equipe e ferramentas.</p>
+              <a class="link link--paper link--underline-thin link--underline-offset-large case-card__link" href="casos/atendimento.html">Ver caso --&gt;</a>
+            </article>
+          </li>
+          <li class="cases__item">
+            <article class="case-card">
+              <figure class="case-card__image" aria-hidden="true"></figure>
+              <p class="case-card__category">Crescimento</p>
+              <h3 class="case-card__title">Informação para crescer</h3>
+              <p class="case-card__description">Exemplo ilustrativo de estruturação de dados para apoiar decisões e priorizar oportunidades.</p>
+              <a class="link link--paper link--underline-thin link--underline-offset-large case-card__link" href="casos/crescimento.html">Ver caso --&gt;</a>
+            </article>
+          </li>
         </ul>
       </section>
 
