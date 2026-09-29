@@ -34,6 +34,15 @@ if (menu) {
     if (event.target.closest("a")) setMenuOpen(false);
   });
 
+  document.addEventListener("click", (event) => {
+    if (
+      toggle.getAttribute("aria-expanded") === "true" &&
+      !menu.contains(event.target)
+    ) {
+      setMenuOpen(false);
+    }
+  });
+
   menu.addEventListener("keydown", (event) => {
     if (event.key === "Escape" && toggle.getAttribute("aria-expanded") === "true") {
       setMenuOpen(false);

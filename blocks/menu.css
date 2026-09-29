@@ -38,6 +38,24 @@
   height: 1.5rem;
 }
 
+.menu__line {
+  transform-box: view-box;
+  transform-origin: center;
+  transition: transform 180ms ease, opacity 180ms ease;
+}
+
+.menu__toggle--open .menu__line--top {
+  transform: rotate(45deg) translateY(6px);
+}
+
+.menu__toggle--open .menu__line--middle {
+  opacity: 0;
+}
+
+.menu__toggle--open .menu__line--bottom {
+  transform: rotate(-45deg) translateY(-6px);
+}
+
 .menu__list {
   display: flex;
   align-items: center;
@@ -45,4 +63,76 @@
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+/* Corresponde ao token --breakpoint-wide: 64em em tokens.css. */
+@media (max-width: 64em) {
+  .menu__toggle {
+    display: grid;
+    place-items: center;
+  }
+
+  .menu__list {
+    position: absolute;
+    z-index: 1;
+    top: calc(100% + 0.5rem);
+    right: 0;
+    left: auto;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    gap: 1rem;
+    width: max-content;
+    padding: 1.25rem;
+    border: 1px solid var(--color-charcoal-deep);
+    border-radius: 0.25rem;
+    background-color: var(--color-paper-warm);
+    pointer-events: none;
+    transform: scaleY(0);
+    transform-origin: top;
+    visibility: hidden;
+  }
+
+  .menu__list::before,
+  .menu__list::after {
+    position: absolute;
+    bottom: calc(100% - 1px);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    content: "";
+  }
+
+  .menu__list::before {
+    right: 13px;
+    border-width: 0 9px 10px;
+    border-color: transparent transparent var(--color-charcoal-deep);
+  }
+
+  .menu__list::after {
+    bottom: calc(100% - 2px);
+    right: 14px;
+    border-width: 0 8px 9px;
+    border-color: transparent transparent var(--color-paper-warm);
+  }
+
+  .menu--animating .menu__list {
+    transition: transform 220ms ease, visibility 220ms;
+  }
+
+  .menu--open .menu__list {
+    pointer-events: auto;
+    transform: scaleY(1);
+    visibility: visible;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .menu__line {
+    transition: none;
+  }
+
+  .menu__list {
+    transition: none;
+  }
 }

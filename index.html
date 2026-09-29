@@ -17,7 +17,6 @@
     <link rel="stylesheet" href="blocks/navbar.css">
     <link rel="stylesheet" href="blocks/link.css">
     <link rel="stylesheet" href="blocks/menu.css">
-    <link rel="stylesheet" href="responsive.css">
 
     <!-- Atualize o endereço quando o domínio definitivo estiver publicado. -->
     <link rel="canonical" href="https://euzebio.xyz/">
@@ -33,7 +32,9 @@
       <nav class="menu" aria-label="Navegação principal">
         <button class="menu__toggle" type="button" aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir menu">
           <svg class="menu__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <path d="M4 6h16M4 12h16M4 18h16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
+            <path class="menu__line menu__line--top" d="M4 6h16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
+            <path class="menu__line menu__line--middle" d="M4 12h16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
+            <path class="menu__line menu__line--bottom" d="M4 18h16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
           </svg>
         </button>
         <ul class="menu__list" id="menu-principal">

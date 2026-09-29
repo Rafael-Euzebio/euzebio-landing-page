@@ -23,3 +23,18 @@
 .navbar__wordmark {
   height: 1.5rem;
 }
+
+/* Corresponde ao token --breakpoint-compact: 40em em tokens.css. */
+@media (max-width: 40em) {
+  .navbar__brand {
+    gap: 1.875rem;
+  }
+
+  .navbar__mark {
+    height: 3rem;
+  }
+
+  .navbar__wordmark {
+    height: 1.125rem;
+  }
+}
