@@ -7,7 +7,7 @@
 }
 
 .hero__content {
-  max-width: 50%;
+  max-width: 55%;
 }
 
 .hero__title {
@@ -20,8 +20,8 @@
 .hero__title-accent {
   position: relative;
   z-index: 0;
-  padding: 0 0.12em;
   color: var(--color-slate-blue);
+  white-space: nowrap;
 }
 
 .hero__title-accent::before {
@@ -36,6 +36,7 @@
 }
 
 .hero__description {
+  max-width: 80%;
   font-size: var(--font-size-lead);
 }
 
