@@ -18,7 +18,8 @@
   --font-size-heading-small: 1.5rem;
   --font-size-heading-medium: 2rem;
   --font-size-heading-large: 3.85rem;
-  --font-size-button: 1.125rem;
+  --font-size-link: 1.1rem;
+  --font-size-button: 1.3rem;
 
   --page-gutter: clamp(1rem, 5vw, 4rem);
 
