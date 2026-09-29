@@ -24,7 +24,7 @@
   </head>
   <body>
     <header class="navbar">
-      <a class="link link--brand navbar__brand" href="/" aria-label="Rafael Euzebio — página inicial">
+      <a class="link navbar__brand" href="/" aria-label="Rafael Euzebio — página inicial">
         <img class="navbar__mark" src="assets/brand/euzebio-mark-deep-coal.png" alt="" aria-hidden="true">
         <img class="navbar__wordmark" src="assets/brand/wordmark-deep-coal.png" alt="" aria-hidden="true">
       </a>
@@ -38,22 +38,24 @@
           </svg>
         </button>
         <ul class="menu__list" id="menu-principal">
-          <li class="menu__item"><a class="link link--navigation" href="#inicio">Início</a></li>
-          <li class="menu__item"><a class="link link--navigation" href="#como-trabalho">Como trabalho</a></li>
-          <li class="menu__item"><a class="link link--navigation" href="#casos">Casos</a></li>
-          <li class="menu__item"><a class="link link--navigation link--button" href="#contato">Vamos Conversar</a></li>
+          <li class="menu__item"><a class="link link--underlined" href="#inicio">Início</a></li>
+          <li class="menu__item"><a class="link link--underlined" href="#como-trabalho">Como trabalho</a></li>
+          <li class="menu__item"><a class="link link--underlined" href="#casos">Casos</a></li>
+          <li class="menu__item"><a class="link link--button" href="#contato">Vamos Conversar</a></li>
         </ul>
       </nav>
     </header>
 
     <main id="conteudo">
       <section id="inicio" class="hero" aria-labelledby="titulo-principal">
-        <h1 id="titulo-principal">Quando operação e tecnologia não se encaixam, eu ajudo a encontrar o problema e colocar a solução para funcionar.</h1>
-        <p>Trabalho com pequenos negócios e equipes que precisam entender o que está travando uma entrega, organizar prioridades e implantar melhorias em processos, ferramentas e sistemas.</p>
-        <p>
-          <a class="link link--primary" href="#contato">Conte o que está acontecendo</a>
-          <a class="link link--secondary" href="#casos">Veja os casos</a>
-        </p>
+        <div class="hero__content">
+          <h1 class="hero__title" id="titulo-principal">Tecnologia que funciona para <span class="hero__title-accent">seu negócio</span></h1>
+          <p class="hero__description">Ajudo pequenos negócios e equipes a entender o que está atrapalhando o dia a dia, decidir o que precisa mudar e colocar melhorias em prática.</p>
+          <div class="hero__actions">
+            <a class="link link--button link--button-compact link--button-slate link--button-semibold-hover" href="#contato">Conte o que está acontecendo --&gt;</a>
+            <a class="link link--button link--button-compact link--button-inverted link--button-forest link--button-semibold-hover" href="#casos">Veja os casos</a>
+          </div>
+        </div>
       </section>
 
       <section aria-labelledby="situacoes-titulo">
@@ -95,13 +97,13 @@
       <section id="contato" aria-labelledby="contato-titulo">
         <h2 id="contato-titulo">Vamos conversar?</h2>
         <p>O primeiro contato serve para entender o contexto e avaliar qual pode ser o próximo passo.</p>
-        <p><a class="link link--contact" href="mailto:rafael@euzebio.xyz">rafael@euzebio.xyz</a></p>
+        <p><a class="link" href="mailto:rafael@euzebio.xyz">rafael@euzebio.xyz</a></p>
       </section>
     </main>
 
     <footer>
       <p>&copy; <time datetime="2026">2026</time> Rafael Euzebio</p>
-      <address><a class="link link--contact" href="mailto:rafael@euzebio.xyz">rafael@euzebio.xyz</a></address>
+      <address><a class="link" href="mailto:rafael@euzebio.xyz">rafael@euzebio.xyz</a></address>
     </footer>
   </body>
 </html>

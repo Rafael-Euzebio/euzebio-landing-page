@@ -3,7 +3,7 @@
   text-decoration: none;
 }
 
-.link:not(.link--navigation):hover {
+.link:not(.link--underlined):not(.link--button):hover {
   text-decoration: underline;
   text-decoration-thickness: 3px;
 }
@@ -13,17 +13,17 @@
   outline-offset: 3px;
 }
 
-.link--navigation {
+.link--underlined {
   position: relative;
   display: flex;
   align-items: center;
-  font-size: 1rem;
+  font-size: var(--font-size-body);
   line-height: 1.25;
   text-decoration: none;
   white-space: nowrap;
 }
 
-.link--navigation:not(.link--button)::after {
+.link--underlined:not(.link--button)::after {
   position: absolute;
   right: 0;
   bottom: -2.5rem;
@@ -36,25 +36,26 @@
   transition: transform 180ms ease;
 }
 
-.link--navigation:not(.link--button):hover::after,
-.link--navigation:not(.link--button):focus-visible::after {
+.link--underlined:not(.link--button):hover::after,
+.link--underlined:not(.link--button):focus-visible::after {
   transform: scaleX(1);
 }
 
 /* Corresponde ao token --breakpoint-wide: 64em em tokens.css. */
 @media (max-width: 64em) {
-  .link--navigation:not(.link--button)::after {
+  .link--underlined:not(.link--button)::after {
     bottom: -0.25rem;
   }
 }
 
 .link--button {
-  padding: 0.75rem 1rem;
+  padding: 0.875rem 1.25rem;
   border: 1px solid var(--color-charcoal-deep);
   border-radius: 0.25rem;
   background-color: var(--color-charcoal-deep);
   color: var(--color-paper-warm);
-  transition: background-color 180ms ease, color 180ms ease;
+  font-size: var(--font-size-button);
+  transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
 }
 
 .link--button:hover {
@@ -71,8 +72,46 @@
   outline-color: var(--color-charcoal-deep);
 }
 
+.link--button-inverted {
+  background-color: var(--color-paper-warm);
+  color: var(--color-charcoal-deep);
+}
+
+.link--button-inverted:hover {
+  background-color: var(--color-charcoal-deep);
+  color: var(--color-paper-warm);
+}
+
+.link--button-inverted:active {
+  background-color: var(--color-paper-warm);
+  color: var(--color-charcoal-deep);
+}
+
+.link--button-forest:hover:not(:active) {
+  background-color: var(--color-forest-green);
+  color: var(--color-paper-warm);
+}
+
+.link--button-slate:hover:not(:active) {
+  background-color: var(--color-slate-blue);
+  color: var(--color-paper-warm);
+}
+
+.link--button-semibold-hover:hover {
+  font-weight: 600;
+}
+
+/* Corresponde ao token --breakpoint-compact: 40em em tokens.css. */
+@media (max-width: 40em) {
+  .link--button-compact {
+    padding: 0.875rem 0.625rem;
+    font-size: 0.9375rem;
+    white-space: nowrap;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .link--navigation::after,
+  .link--underlined::after,
   .link--button {
     transition: none;
   }

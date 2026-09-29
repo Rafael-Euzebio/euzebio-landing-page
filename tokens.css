@@ -2,13 +2,25 @@
   /* Paleta oficial EUZEBIO v1.0 */
   --color-paper-warm: #FAF6F0;
   --color-charcoal-deep: #1E242C;
-  --color-slate-blue: #2F4660;
+  --color-slate-blue: #355377;
   --color-forest-green: #3E5A4B;
   --color-paper-border: #E8E1D8;
 
   /* Tipografia definida na especificação; as fontes locais são fallbacks. */
   --font-heading: "Poppins", sans-serif;
   --font-body: "Inter", sans-serif;
+
+  /* Escala tipográfica baseada no corpo já usado de 1rem. */
+  --font-size-caption: 0.75rem;
+  --font-size-small: 0.875rem;
+  --font-size-body: 1rem;
+  --font-size-lead: 1.25rem;
+  --font-size-heading-small: 1.5rem;
+  --font-size-heading-medium: 2rem;
+  --font-size-heading-large: 3.5rem;
+  --font-size-button: 1.125rem;
+
+  --page-gutter: clamp(1rem, 5vw, 4rem);
 
   /* Breakpoints compartilhados; CSS vars não podem ser usadas dentro de @media. */
   --breakpoint-compact: 40em;
