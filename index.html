@@ -23,12 +23,19 @@
     <!-- Atualize o endereço quando o domínio definitivo estiver publicado. -->
     <link rel="canonical" href="https://euzebio.xyz/">
     <script src="blocks/menu.js" defer></script>
+    <script src="blocks/navbar.js" defer></script>
   </head>
   <body>
     <header class="navbar">
       <a class="link navbar__brand" href="/" aria-label="Rafael Euzebio — página inicial">
-        <img class="navbar__mark" src="assets/brand/euzebio-mark-deep-coal.png" alt="" aria-hidden="true">
-        <img class="navbar__wordmark" src="assets/brand/wordmark-deep-coal.png" alt="" aria-hidden="true">
+        <span class="navbar__mark" aria-hidden="true">
+          <img class="navbar__logo navbar__logo--charcoal" src="assets/brand/euzebio-mark-deep-coal.png" alt="">
+          <img class="navbar__logo navbar__logo--paper" src="assets/brand/euzebio-mark-warm-paper.png" alt="">
+        </span>
+        <span class="navbar__wordmark" aria-hidden="true">
+          <img class="navbar__logo navbar__logo--charcoal" src="assets/brand/wordmark-deep-coal.png" alt="">
+          <img class="navbar__logo navbar__logo--paper" src="assets/brand/wordmark-warm-paper.png" alt="">
+        </span>
       </a>
 
       <nav class="menu" aria-label="Navegação principal">

@@ -118,6 +118,27 @@
   color: var(--color-paper-warm);
 }
 
+.link--button-inverted-forest {
+  border-color: var(--color-paper-warm);
+  background-color: var(--color-paper-warm);
+  color: var(--color-forest-green);
+}
+
+.link--button-inverted-forest:hover:not(:active),
+.link--button-inverted-forest:focus-visible:not(:active) {
+  background-color: var(--color-forest-green);
+  color: var(--color-paper-warm);
+}
+
+.link--button-inverted-forest:active {
+  background-color: var(--color-paper-warm);
+  color: var(--color-forest-green);
+}
+
+.link--button-inverted-forest:focus-visible {
+  outline-color: var(--color-paper-warm);
+}
+
 .link--button-semibold-hover:hover,
 .link--button-semibold-hover:focus-visible {
   font-weight: 600;

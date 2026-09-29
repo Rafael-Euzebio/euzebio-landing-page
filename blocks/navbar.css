@@ -1,5 +1,12 @@
 .navbar {
-  position: relative;
+  --navbar-background: var(--color-paper-warm);
+  --navbar-foreground: var(--color-charcoal-deep);
+  --navbar-border: var(--color-paper-border);
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  left: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -7,8 +14,16 @@
   padding-bottom: 1rem;
   padding-left: var(--page-gutter);
   padding-right: var(--page-gutter);
-  border-bottom: 1px solid var(--color-paper-border);
-  background-color: var(--color-paper-warm);
+  border-bottom: 1px solid var(--navbar-border);
+  background-color: var(--navbar-background);
+  color: var(--navbar-foreground);
+  transition: background-color 300ms ease, color 300ms ease, border-color 300ms ease;
+}
+
+.navbar--forest {
+  --navbar-background: var(--color-forest-green);
+  --navbar-foreground: var(--color-paper-warm);
+  --navbar-border: var(--color-paper-warm);
 }
 
 .navbar__brand {
@@ -17,13 +32,38 @@
   gap: 2.5rem;
 }
 
-.navbar__mark {
-  height: 4rem;
+.navbar__mark,
+.navbar__wordmark {
+  position: relative;
+  display: grid;
   flex: none;
 }
 
+.navbar__mark {
+  width: 3.158rem;
+  height: 4rem;
+}
+
 .navbar__wordmark {
+  width: 14.61rem;
   height: 1.5rem;
+}
+
+.navbar__logo {
+  grid-area: 1 / 1;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: opacity 300ms ease;
+}
+
+.navbar__logo--paper,
+.navbar--forest .navbar__logo--charcoal {
+  opacity: 0;
+}
+
+.navbar--forest .navbar__logo--paper {
+  opacity: 1;
 }
 
 /* Corresponde ao token --breakpoint-compact: 40em em tokens.css. */
@@ -33,10 +73,19 @@
   }
 
   .navbar__mark {
+    width: 2.369rem;
     height: 3rem;
   }
 
   .navbar__wordmark {
+    width: 10.957rem;
     height: 1.125rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .navbar,
+  .navbar__logo {
+    transition: none;
   }
 }

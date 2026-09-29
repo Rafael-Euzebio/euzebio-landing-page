@@ -1,5 +1,5 @@
 .hero {
-  min-height: calc(100svh - 6.0625rem);
+  min-height: calc(100svh - var(--navbar-height));
   padding-top: clamp(6rem, 15vh, 12rem);
   padding-left: var(--page-gutter);
   padding-right: var(--page-gutter);
@@ -54,10 +54,8 @@
   }
 }
 
-/* A navbar fica mais baixa com a marca reduzida no breakpoint compacto. */
 @media (max-width: 40em) {
   .hero {
-    min-height: calc(100svh - 5.0625rem);
     padding-top: 3rem;
   }
 

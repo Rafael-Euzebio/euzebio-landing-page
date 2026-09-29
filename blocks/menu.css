@@ -1,7 +1,14 @@
 .menu {
+  --menu-background: var(--color-paper-warm);
+  --menu-foreground: var(--color-charcoal-deep);
   position: relative;
   display: flex;
   align-items: center;
+}
+
+.menu--forest {
+  --menu-background: var(--color-forest-green);
+  --menu-foreground: var(--color-paper-warm);
 }
 
 .menu__toggle {
@@ -9,23 +16,23 @@
   width: 44px;
   height: 44px;
   padding: 0.5rem;
-  border: 1px solid var(--color-charcoal-deep);
+  border: 1px solid var(--menu-foreground);
   border-radius: 0.25rem;
-  background-color: var(--color-paper-warm);
-  color: var(--color-charcoal-deep);
+  background-color: var(--menu-background);
+  color: var(--menu-foreground);
   cursor: pointer;
-  transition: background-color 160ms ease, color 160ms ease;
+  transition: background-color 300ms ease, color 300ms ease, border-color 300ms ease;
 }
 
 .menu__toggle--open {
-  background-color: var(--color-paper-warm);
-  color: var(--color-charcoal-deep);
+  background-color: var(--menu-background);
+  color: var(--menu-foreground);
 }
 
 .menu__toggle:hover,
 .menu__toggle--open:hover {
-  background-color: var(--color-charcoal-deep);
-  color: var(--color-paper-warm);
+  background-color: var(--menu-foreground);
+  color: var(--menu-background);
 }
 
 .menu__toggle:focus-visible {
@@ -91,9 +98,10 @@
     gap: 1.75rem;
     width: max-content;
     padding: 1.5rem;
-    border: 1px solid var(--color-charcoal-deep);
+    border: 1px solid var(--menu-foreground);
     border-radius: 0.25rem;
-    background-color: var(--color-paper-warm);
+    background-color: var(--menu-background);
+    transition: background-color 300ms ease, border-color 300ms ease;
     pointer-events: none;
     transform: scaleY(0);
     transform-origin: top;
@@ -113,18 +121,23 @@
   .menu__list::before {
     right: 15px;
     border-width: 0 9px 10px;
-    border-color: transparent transparent var(--color-charcoal-deep);
+    border-color: transparent transparent var(--menu-foreground);
   }
 
   .menu__list::after {
     bottom: calc(100% - 2px);
     right: 16px;
     border-width: 0 8px 9px;
-    border-color: transparent transparent var(--color-paper-warm);
+    border-color: transparent transparent var(--menu-background);
+  }
+
+  .menu__list::before,
+  .menu__list::after {
+    transition: border-color 300ms ease;
   }
 
   .menu--animating .menu__list {
-    transition: transform 220ms ease, visibility 220ms;
+    transition: transform 220ms ease, visibility 220ms, background-color 300ms ease, border-color 300ms ease;
   }
 
   .menu--open .menu__list {
@@ -139,7 +152,17 @@
     transition: none;
   }
 
-  .menu__list {
+  .menu__toggle {
+    transition: none;
+  }
+
+  .menu__list,
+  .menu--animating .menu__list {
+    transition: none;
+  }
+
+  .menu__list::before,
+  .menu__list::after {
     transition: none;
   }
 }

@@ -22,8 +22,15 @@
   --font-size-button: 1.3rem;
 
   --page-gutter: clamp(1rem, 5vw, 4rem);
+  --navbar-height: 6.0625rem;
 
   /* Breakpoints compartilhados; CSS vars não podem ser usadas dentro de @media. */
   --breakpoint-compact: 40em;
   --breakpoint-wide: 64em;
+}
+
+@media (max-width: 40em) {
+  :root {
+    --navbar-height: 5.0625rem;
+  }
 }
