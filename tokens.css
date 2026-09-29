@@ -9,4 +9,8 @@
   /* Tipografia definida na especificação; as fontes locais são fallbacks. */
   --font-heading: "Poppins", sans-serif;
   --font-body: "Inter", sans-serif;
+
+  /* Breakpoints compartilhados; CSS vars não podem ser usadas dentro de @media. */
+  --breakpoint-compact: 40em;
+  --breakpoint-wide: 64em;
 }

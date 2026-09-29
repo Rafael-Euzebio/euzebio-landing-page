@@ -16,9 +16,12 @@
     <link rel="stylesheet" href="blocks/hero.css">
     <link rel="stylesheet" href="blocks/navbar.css">
     <link rel="stylesheet" href="blocks/link.css">
+    <link rel="stylesheet" href="blocks/menu.css">
+    <link rel="stylesheet" href="responsive.css">
 
     <!-- Atualize o endereço quando o domínio definitivo estiver publicado. -->
     <link rel="canonical" href="https://euzebio.xyz/">
+    <script src="blocks/menu.js" defer></script>
   </head>
   <body>
     <header class="navbar">
@@ -27,12 +30,17 @@
         <img class="navbar__wordmark" src="assets/brand/wordmark-deep-coal.png" alt="" aria-hidden="true">
       </a>
 
-      <nav aria-label="Navegação principal">
-        <ul class="navbar__list">
-          <li><a class="link link--navigation" href="#inicio">Início</a></li>
-          <li><a class="link link--navigation" href="#como-trabalho">Como trabalho</a></li>
-          <li><a class="link link--navigation" href="#casos">Casos</a></li>
-          <li><a class="link link--navigation link--button" href="#contato">Vamos Conversar</a></li>
+      <nav class="menu" aria-label="Navegação principal">
+        <button class="menu__toggle" type="button" aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir menu">
+          <svg class="menu__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M4 6h16M4 12h16M4 18h16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
+          </svg>
+        </button>
+        <ul class="menu__list" id="menu-principal">
+          <li class="menu__item"><a class="link link--navigation" href="#inicio">Início</a></li>
+          <li class="menu__item"><a class="link link--navigation" href="#como-trabalho">Como trabalho</a></li>
+          <li class="menu__item"><a class="link link--navigation" href="#casos">Casos</a></li>
+          <li class="menu__item"><a class="link link--navigation link--button" href="#contato">Vamos Conversar</a></li>
         </ul>
       </nav>
     </header>

@@ -1,4 +1,5 @@
 .navbar {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -21,13 +22,4 @@
 
 .navbar__wordmark {
   height: 1.5rem;
-}
-
-.navbar__list {
-  display: flex;
-  align-items: center;
-  gap: 4rem;
-  margin: 0;
-  padding: 0;
-  list-style: none;
 }
