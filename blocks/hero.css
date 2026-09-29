@@ -38,6 +38,7 @@
 .hero__description {
   max-width: 80%;
   font-size: var(--font-size-lead);
+  line-height: 1.6;
 }
 
 .hero__actions {
