@@ -3,6 +3,7 @@ body {
 }
 
 html {
+  scroll-behavior: smooth;
   scroll-padding-top: var(--navbar-height);
 }
 
@@ -24,4 +25,10 @@ input,
 select,
 textarea {
   font-family: var(--font-heading);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
