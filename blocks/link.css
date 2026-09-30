@@ -17,6 +17,25 @@
   color: var(--color-paper-warm);
 }
 
+.link--hover-forest:hover,
+.link--hover-forest:focus-visible {
+  color: var(--color-forest-green);
+}
+
+.link--hover-lift {
+  transition: transform 180ms ease;
+}
+
+.link--hover-lift:hover,
+.link--hover-lift:focus-visible {
+  transform: translateY(-2px);
+}
+
+.navbar--forest .link--hover-forest:hover,
+.navbar--forest .link--hover-forest:focus-visible {
+  color: var(--color-paper-warm);
+}
+
 .link:not(.link--underlined):not(.link--button):hover {
   text-decoration: underline;
   text-decoration-thickness: var(--link-underline-thickness);
@@ -154,7 +173,13 @@
 
 @media (prefers-reduced-motion: reduce) {
   .link--underlined::after,
-  .link--button {
+  .link--button,
+  .link--hover-lift {
     transition: none;
+  }
+
+  .link--hover-lift:hover,
+  .link--hover-lift:focus-visible {
+    transform: none;
   }
 }
