@@ -37,3 +37,24 @@
   align-self: flex-start;
   margin-top: auto;
 }
+
+@media (min-width: 64.01em) {
+  .case-card__image {
+    aspect-ratio: 16 / 9;
+    margin-bottom: 0.75rem;
+  }
+
+  .case-card__category {
+    margin-bottom: 0.375rem;
+  }
+
+  .case-card__title {
+    margin-bottom: 0.5rem;
+    line-height: 1.15;
+  }
+
+  .case-card__description {
+    margin-bottom: 1rem;
+    line-height: 1.4;
+  }
+}
