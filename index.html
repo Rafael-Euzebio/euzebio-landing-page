@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="tokens.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="blocks/hero.css">
+    <link rel="stylesheet" href="blocks/situations.css">
     <link rel="stylesheet" href="blocks/cases.css">
     <link rel="stylesheet" href="blocks/navbar.css">
     <link rel="stylesheet" href="blocks/link.css">
@@ -67,14 +68,74 @@
         </div>
       </section>
 
-      <section aria-labelledby="situacoes-titulo">
-        <h2 id="situacoes-titulo">Problemas que posso ajudar a investigar</h2>
-        <ul>
-          <li>Informações espalhadas entre planilhas e sistemas.</li>
-          <li>Uma ferramenta que interrompe ou atrasa a operação.</li>
-          <li>Tarefas manuais que geram retrabalho.</li>
-          <li>Uma entrega digital travada entre requisitos, pessoas e tecnologia.</li>
-        </ul>
+      <section class="situations" aria-labelledby="situacoes-titulo">
+        <h2 class="situations__title" id="situacoes-titulo">Reconhece alguma destas situações?</h2>
+        <p class="situations__description">Alguns sinais de que vale olhar mais de perto o que está acontecendo.</p>
+        <ol class="situations__list">
+          <li class="situations__item">
+            <span class="situations__number" aria-hidden="true">01</span>
+            <div class="situations__content">
+              <h3 class="situations__item-title">Algo importante vive dando problema</h3>
+              <p class="situations__text">O trabalho para, dá erro ou depende de improviso para continuar.</p>
+            </div>
+            <div class="situations__dividers" aria-hidden="true">
+              <span class="situations__divider situations__divider--vertical situations__divider--wide situations__divider--tablet situations__divider--first-row"></span>
+            </div>
+          </li>
+          <li class="situations__item">
+            <span class="situations__number" aria-hidden="true">02</span>
+            <div class="situations__content">
+              <h3 class="situations__item-title">Todo mundo trabalha, mas o resultado demora a aparecer</h3>
+              <p class="situations__text">Tarefas avançam, mas atrasos, dependências e retrabalho continuam surgindo.</p>
+            </div>
+            <div class="situations__dividers" aria-hidden="true">
+              <span class="situations__divider situations__divider--vertical situations__divider--wide situations__divider--first-row"></span>
+            </div>
+          </li>
+          <li class="situations__item">
+            <span class="situations__number" aria-hidden="true">03</span>
+            <div class="situations__content">
+              <h3 class="situations__item-title">As informações estão espalhadas</h3>
+              <p class="situations__text">Planilhas, ferramentas e pessoas guardam partes diferentes da informação.</p>
+            </div>
+            <div class="situations__dividers" aria-hidden="true">
+              <span class="situations__divider situations__divider--horizontal situations__divider--tablet situations__divider--compact"></span>
+              <span class="situations__divider situations__divider--vertical situations__divider--tablet"></span>
+            </div>
+          </li>
+          <li class="situations__item">
+            <span class="situations__number" aria-hidden="true">04</span>
+            <div class="situations__content">
+              <h3 class="situations__item-title">Tudo depende demais de uma pessoa</h3>
+              <p class="situations__text">Quando ela não está, decisões ou tarefas importantes acabam parando.</p>
+            </div>
+            <div class="situations__dividers" aria-hidden="true">
+              <span class="situations__divider situations__divider--horizontal situations__divider--wide situations__divider--tablet situations__divider--compact"></span>
+              <span class="situations__divider situations__divider--vertical situations__divider--wide situations__divider--last-row"></span>
+            </div>
+          </li>
+          <li class="situations__item">
+            <span class="situations__number" aria-hidden="true">05</span>
+            <div class="situations__content">
+              <h3 class="situations__item-title">O jeito atual de trabalhar ficou difícil de manter</h3>
+              <p class="situations__text">O que antes funcionava agora gera trabalho manual, confusão e perda de tempo.</p>
+            </div>
+            <div class="situations__dividers" aria-hidden="true">
+              <span class="situations__divider situations__divider--horizontal situations__divider--wide situations__divider--tablet situations__divider--compact"></span>
+              <span class="situations__divider situations__divider--vertical situations__divider--wide situations__divider--tablet situations__divider--last-row"></span>
+            </div>
+          </li>
+          <li class="situations__item">
+            <span class="situations__number" aria-hidden="true">06</span>
+            <div class="situations__content">
+              <h3 class="situations__item-title">Você sabe que algo precisa melhorar, mas não sabe por onde começar</h3>
+              <p class="situations__text">Não está claro se vale mudar uma ferramenta, reorganizar o trabalho ou tentar outro caminho.</p>
+            </div>
+            <div class="situations__dividers" aria-hidden="true">
+              <span class="situations__divider situations__divider--horizontal situations__divider--wide situations__divider--tablet situations__divider--compact"></span>
+            </div>
+          </li>
+        </ol>
       </section>
 
       <section id="como-trabalho" aria-labelledby="metodo-titulo">
