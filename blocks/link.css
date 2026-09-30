@@ -13,6 +13,32 @@
   text-underline-offset: 0.5rem;
 }
 
+.link--underline-from-right {
+  position: relative;
+  display: inline-flex;
+}
+
+.link--underline-from-right::after {
+  position: absolute;
+  right: 0;
+  bottom: -0.5rem;
+  left: 0;
+  height: var(--link-underline-thickness);
+  background-color: currentColor;
+  content: "";
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 180ms ease;
+}
+
+.link--hover-slide-right {
+  transition: transform 180ms ease;
+}
+
+.link--hover-slide-right:focus-visible {
+  transform: translateX(3px);
+}
+
 .link--paper {
   color: var(--color-paper-warm);
 }
@@ -157,16 +183,24 @@
     transform: translateY(-2px);
   }
 
+  .link--hover-slide-right:hover {
+    transform: translateX(3px);
+  }
+
   .navbar--forest .link--hover-forest:hover {
     color: var(--color-paper-warm);
   }
 
-  .link:not(.link--underlined):not(.link--button):hover {
+  .link:not(.link--underlined):not(.link--button):not(.link--underline-from-right):hover {
     text-decoration: underline;
     text-decoration-thickness: var(--link-underline-thickness);
   }
 
   .link--underlined:not(.link--button):hover::after {
+    transform: scaleX(1);
+  }
+
+  .link--underline-from-right:hover::after {
     transform: scaleX(1);
   }
 
@@ -217,13 +251,17 @@
 
 @media (prefers-reduced-motion: reduce) {
   .link--underlined::after,
+  .link--underline-from-right::after,
   .link--button,
-  .link--hover-lift {
+  .link--hover-lift,
+  .link--hover-slide-right {
     transition: none;
   }
 
   .link--hover-lift:hover,
-  .link--hover-lift:focus-visible {
+  .link--hover-lift:focus-visible,
+  .link--hover-slide-right:hover,
+  .link--hover-slide-right:focus-visible {
     transform: none;
   }
 }
