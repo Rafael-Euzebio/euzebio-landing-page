@@ -22,11 +22,13 @@ if (navbar && cases) {
     observer?.disconnect();
 
     const navbarHeight = Math.ceil(navbar.getBoundingClientRect().height);
-    const bottomMargin = Math.max(0, window.innerHeight - navbarHeight - 1);
+    const themeOffset = 64;
+    const triggerPosition = navbarHeight + themeOffset;
+    const bottomMargin = Math.max(0, window.innerHeight - triggerPosition - 1);
 
     observer = new IntersectionObserver(
       ([entry]) => setForestTheme(entry.isIntersecting),
-      { rootMargin: `-${navbarHeight}px 0px -${bottomMargin}px 0px` }
+      { rootMargin: `-${triggerPosition}px 0px -${bottomMargin}px 0px` }
     );
     observer.observe(cases);
   };
