@@ -11,6 +11,7 @@ if (navbar && cases) {
     navbar.classList.toggle("navbar--forest", isActive);
     menu?.classList.toggle("menu--forest", isActive);
     links.forEach((link) => link.classList.toggle("link--paper", isActive));
+    contactLink?.classList.toggle("link--button-slate", !isActive);
     contactLink?.classList.toggle("link--button-inverted-forest", isActive);
   };
 
