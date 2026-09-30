@@ -13,12 +13,12 @@
   text-underline-offset: 0.5rem;
 }
 
-.link--underline-from-right {
+.link--underline-from-left {
   position: relative;
   display: inline-flex;
 }
 
-.link--underline-from-right::after {
+.link--underline-from-left::after {
   position: absolute;
   right: 0;
   bottom: -0.5rem;
@@ -43,8 +43,14 @@
   color: var(--color-paper-warm);
 }
 
+.link--hover-forest:hover,
 .link--hover-forest:focus-visible {
   color: var(--color-forest-green);
+}
+
+.link--hover-paper:hover,
+.link--hover-paper:focus-visible {
+  color: var(--color-paper-warm);
 }
 
 .link--hover-lift {
@@ -53,10 +59,6 @@
 
 .link--hover-lift:focus-visible {
   transform: translateY(-2px);
-}
-
-.navbar--forest .link--hover-forest:focus-visible {
-  color: var(--color-paper-warm);
 }
 
 .link:focus-visible {
@@ -76,7 +78,7 @@
 .link--underlined:not(.link--button)::after {
   position: absolute;
   right: 0;
-  bottom: -2.5rem;
+  bottom: -0.25rem;
   left: 0;
   height: 3px;
   background-color: currentColor;
@@ -84,6 +86,10 @@
   transform: scaleX(0);
   transform-origin: center;
   transition: transform 180ms ease;
+}
+
+.link--underline-at-navbar-edge:not(.link--button)::after {
+  bottom: -2.5rem;
 }
 
 .link--underlined:not(.link--button):focus-visible::after {
@@ -96,7 +102,7 @@
     font-size: 1.2rem;
   }
 
-  .link--underlined:not(.link--button)::after {
+  .link--underline-at-navbar-edge:not(.link--button)::after {
     bottom: -0.25rem;
   }
 }
@@ -108,12 +114,14 @@
   background-color: var(--color-charcoal-deep);
   color: var(--color-paper-warm);
   font-size: var(--font-size-button);
+  text-align: center;
   transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
 }
 
 .link--button:focus-visible {
   background-color: var(--color-paper-warm);
   color: var(--color-charcoal-deep);
+  outline-color: var(--color-charcoal-deep);
 }
 
 .link--button:active {
@@ -121,18 +129,9 @@
   color: var(--color-paper-warm);
 }
 
-.link--button:focus-visible {
-  outline-color: var(--color-charcoal-deep);
-}
-
 .link--button-inverted {
   background-color: var(--color-paper-warm);
   color: var(--color-charcoal-deep);
-}
-
-.link--button-inverted:focus-visible {
-  background-color: var(--color-charcoal-deep);
-  color: var(--color-paper-warm);
 }
 
 .link--button-inverted:active {
@@ -187,11 +186,7 @@
     transform: translateX(3px);
   }
 
-  .navbar--forest .link--hover-forest:hover {
-    color: var(--color-paper-warm);
-  }
-
-  .link:not(.link--underlined):not(.link--button):not(.link--underline-from-right):hover {
+  .link:not(.link--underlined):not(.link--button):not(.link--underline-from-left):hover {
     text-decoration: underline;
     text-decoration-thickness: var(--link-underline-thickness);
   }
@@ -200,18 +195,13 @@
     transform: scaleX(1);
   }
 
-  .link--underline-from-right:hover::after {
+  .link--underline-from-left:hover::after {
     transform: scaleX(1);
   }
 
   .link--button:hover {
     background-color: var(--color-paper-warm);
     color: var(--color-charcoal-deep);
-  }
-
-  .link--button-inverted:hover {
-    background-color: var(--color-charcoal-deep);
-    color: var(--color-paper-warm);
   }
 
   .link--button-forest:hover:not(:active) {
@@ -251,7 +241,7 @@
 
 @media (prefers-reduced-motion: reduce) {
   .link--underlined::after,
-  .link--underline-from-right::after,
+  .link--underline-from-left::after,
   .link--button,
   .link--hover-lift,
   .link--hover-slide-right {

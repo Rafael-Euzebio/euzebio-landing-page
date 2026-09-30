@@ -4,6 +4,7 @@ const cases = document.querySelector("#casos");
 if (navbar && cases) {
   const menu = navbar.querySelector(".menu");
   const links = navbar.querySelectorAll(".link:not(.link--button)");
+  const casesLink = navbar.querySelector('.link[href="#casos"]');
   const contactLink = navbar.querySelector(".link--button");
   let observer;
 
@@ -11,6 +12,8 @@ if (navbar && cases) {
     navbar.classList.toggle("navbar--forest", isActive);
     menu?.classList.toggle("menu--forest", isActive);
     links.forEach((link) => link.classList.toggle("link--paper", isActive));
+    casesLink?.classList.toggle("link--hover-forest", !isActive);
+    casesLink?.classList.toggle("link--hover-paper", isActive);
     contactLink?.classList.toggle("link--button-slate", !isActive);
     contactLink?.classList.toggle("link--button-inverted-forest", isActive);
   };
