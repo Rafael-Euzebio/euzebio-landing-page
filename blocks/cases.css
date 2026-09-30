@@ -48,7 +48,7 @@
 /* Corresponde ao token --breakpoint-wide: 64em em tokens.css. */
 @media (max-width: 64em) {
   .cases__list {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr;
   }
 }
 
@@ -57,9 +57,5 @@
   .cases {
     padding-top: 3rem;
     padding-bottom: 3rem;
-  }
-
-  .cases__list {
-    grid-template-columns: 1fr;
   }
 }
