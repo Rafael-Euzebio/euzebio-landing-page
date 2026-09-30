@@ -17,7 +17,6 @@
   color: var(--color-paper-warm);
 }
 
-.link--hover-forest:hover,
 .link--hover-forest:focus-visible {
   color: var(--color-forest-green);
 }
@@ -26,19 +25,12 @@
   transition: transform 180ms ease;
 }
 
-.link--hover-lift:hover,
 .link--hover-lift:focus-visible {
   transform: translateY(-2px);
 }
 
-.navbar--forest .link--hover-forest:hover,
 .navbar--forest .link--hover-forest:focus-visible {
   color: var(--color-paper-warm);
-}
-
-.link:not(.link--underlined):not(.link--button):hover {
-  text-decoration: underline;
-  text-decoration-thickness: var(--link-underline-thickness);
 }
 
 .link:focus-visible {
@@ -68,7 +60,6 @@
   transition: transform 180ms ease;
 }
 
-.link--underlined:not(.link--button):hover::after,
 .link--underlined:not(.link--button):focus-visible::after {
   transform: scaleX(1);
 }
@@ -94,7 +85,6 @@
   transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
 }
 
-.link--button:hover,
 .link--button:focus-visible {
   background-color: var(--color-paper-warm);
   color: var(--color-charcoal-deep);
@@ -114,7 +104,6 @@
   color: var(--color-charcoal-deep);
 }
 
-.link--button-inverted:hover,
 .link--button-inverted:focus-visible {
   background-color: var(--color-charcoal-deep);
   color: var(--color-paper-warm);
@@ -125,13 +114,11 @@
   color: var(--color-charcoal-deep);
 }
 
-.link--button-forest:hover:not(:active),
 .link--button-forest:focus-visible:not(:active) {
   background-color: var(--color-forest-green);
   color: var(--color-paper-warm);
 }
 
-.link--button-slate:hover:not(:active),
 .link--button-slate:focus-visible:not(:active) {
   background-color: var(--color-slate-blue);
   color: var(--color-paper-warm);
@@ -143,7 +130,6 @@
   color: var(--color-forest-green);
 }
 
-.link--button-inverted-forest:hover:not(:active),
 .link--button-inverted-forest:focus-visible:not(:active) {
   background-color: var(--color-forest-green);
   color: var(--color-paper-warm);
@@ -158,9 +144,67 @@
   outline-color: var(--color-paper-warm);
 }
 
-.link--button-semibold-hover:hover,
 .link--button-semibold-hover:focus-visible {
   font-weight: 600;
+}
+
+@media (hover: hover) {
+  .link--hover-forest:hover {
+    color: var(--color-forest-green);
+  }
+
+  .link--hover-lift:hover {
+    transform: translateY(-2px);
+  }
+
+  .navbar--forest .link--hover-forest:hover {
+    color: var(--color-paper-warm);
+  }
+
+  .link:not(.link--underlined):not(.link--button):hover {
+    text-decoration: underline;
+    text-decoration-thickness: var(--link-underline-thickness);
+  }
+
+  .link--underlined:not(.link--button):hover::after {
+    transform: scaleX(1);
+  }
+
+  .link--button:hover {
+    background-color: var(--color-paper-warm);
+    color: var(--color-charcoal-deep);
+  }
+
+  .link--button-inverted:hover {
+    background-color: var(--color-charcoal-deep);
+    color: var(--color-paper-warm);
+  }
+
+  .link--button-forest:hover:not(:active) {
+    background-color: var(--color-forest-green);
+    color: var(--color-paper-warm);
+  }
+
+  .link--button-slate:hover:not(:active) {
+    background-color: var(--color-slate-blue);
+    color: var(--color-paper-warm);
+  }
+
+  .link--button-inverted-forest:hover:not(:active) {
+    background-color: var(--color-forest-green);
+    color: var(--color-paper-warm);
+  }
+
+  .link--button-semibold-hover:hover {
+    font-weight: 600;
+  }
+}
+
+@media (hover: none) {
+  .link--button-forest:active {
+    background-color: var(--color-forest-green);
+    color: var(--color-paper-warm);
+  }
 }
 
 /* Corresponde ao token --breakpoint-compact: 40em em tokens.css. */
