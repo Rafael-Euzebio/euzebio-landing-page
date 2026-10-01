@@ -5,8 +5,27 @@
 }
 
 .situations__title {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
   font-size: var(--font-size-heading-medium);
   line-height: 1.2;
+}
+
+.situations__section-number {
+  color: var(--color-forest-green);
+  font-size: var(--font-size-lead);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.situations__section-number::after {
+  display: block;
+  width: 5rem;
+  height: 1px;
+  margin-top: 0.375rem;
+  background-color: currentColor;
+  content: "";
 }
 
 .situations__description {
