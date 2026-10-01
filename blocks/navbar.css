@@ -1,7 +1,9 @@
 .navbar {
-  --navbar-background: var(--color-paper-warm);
-  --navbar-foreground: var(--color-charcoal-deep);
+  --theme-background: var(--color-paper-warm);
+  --theme-foreground: var(--color-charcoal-deep);
   --navbar-border: var(--color-paper-border);
+  --navbar-logo-charcoal-opacity: 1;
+  --navbar-logo-paper-opacity: 0;
   position: fixed;
   z-index: 10;
   top: 0;
@@ -15,15 +17,25 @@
   padding-left: var(--page-gutter);
   padding-right: var(--page-gutter);
   border-bottom: 1px solid var(--navbar-border);
-  background-color: var(--navbar-background);
-  color: var(--navbar-foreground);
+  background-color: var(--theme-background);
+  color: var(--theme-foreground);
   transition: background-color 300ms ease, color 300ms ease, border-color 300ms ease;
 }
 
 .navbar--forest {
-  --navbar-background: var(--color-forest-green);
-  --navbar-foreground: var(--color-paper-warm);
+  --theme-background: var(--color-forest-green);
+}
+
+.navbar--charcoal {
+  --theme-background: var(--color-charcoal-deep);
+}
+
+.navbar--forest,
+.navbar--charcoal {
+  --theme-foreground: var(--color-paper-warm);
   --navbar-border: var(--color-paper-warm);
+  --navbar-logo-charcoal-opacity: 0;
+  --navbar-logo-paper-opacity: 1;
 }
 
 .navbar__brand {
@@ -57,13 +69,12 @@
   transition: opacity 300ms ease;
 }
 
-.navbar__logo--paper,
-.navbar--forest .navbar__logo--charcoal {
-  opacity: 0;
+.navbar__logo--charcoal {
+  opacity: var(--navbar-logo-charcoal-opacity);
 }
 
-.navbar--forest .navbar__logo--paper {
-  opacity: 1;
+.navbar__logo--paper {
+  opacity: var(--navbar-logo-paper-opacity);
 }
 
 /* Corresponde ao token --breakpoint-compact: 40em em tokens.css. */

@@ -1,24 +1,29 @@
 const navbar = document.querySelector(".navbar");
-const cases = document.querySelector("#casos");
+const sections = document.querySelectorAll("main > section");
 
-if (navbar && cases) {
-  const menu = navbar.querySelector(".menu");
+if (navbar) {
   const links = navbar.querySelectorAll(".link:not(.link--button)");
   const casesLink = navbar.querySelector('.link[href="#casos"]');
   const contactLink = navbar.querySelector(".link--button");
   let observer;
+  let currentTheme = null;
 
-  const setForestTheme = (isActive) => {
-    navbar.classList.toggle("navbar--forest", isActive);
-    menu?.classList.toggle("menu--forest", isActive);
+  const setTheme = (theme) => {
+    if (theme === currentTheme) return;
+
+    if (currentTheme) navbar.classList.remove(`navbar--${currentTheme}`);
+    if (theme) navbar.classList.add(`navbar--${theme}`);
+    currentTheme = theme;
+
+    const isActive = theme !== null;
     links.forEach((link) => link.classList.toggle("link--paper", isActive));
     casesLink?.classList.toggle("link--hover-forest", !isActive);
     casesLink?.classList.toggle("link--hover-paper", isActive);
     contactLink?.classList.toggle("link--button-slate", !isActive);
-    contactLink?.classList.toggle("link--button-inverted-forest", isActive);
+    contactLink?.classList.toggle("link--button-inverted-themed", isActive);
   };
 
-  const observeCases = () => {
+  const observeSections = () => {
     observer?.disconnect();
 
     const navbarHeight = Math.ceil(navbar.getBoundingClientRect().height);
@@ -27,13 +32,19 @@ if (navbar && cases) {
     const bottomMargin = Math.max(0, window.innerHeight - triggerPosition - 1);
 
     observer = new IntersectionObserver(
-      ([entry]) => setForestTheme(entry.isIntersecting),
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setTheme(entry.target.dataset.navbarTheme || null);
+          }
+        });
+      },
       { rootMargin: `-${triggerPosition}px 0px -${bottomMargin}px 0px` }
     );
-    observer.observe(cases);
+    sections.forEach((section) => observer.observe(section));
   };
 
-  observeCases();
-  window.addEventListener("resize", observeCases);
-  new ResizeObserver(observeCases).observe(navbar);
+  observeSections();
+  window.addEventListener("resize", observeSections);
+  new ResizeObserver(observeSections).observe(navbar);
 }

@@ -6,9 +6,9 @@
   align-items: center;
 }
 
-.menu--forest {
-  --menu-background: var(--color-forest-green);
-  --menu-foreground: var(--color-paper-warm);
+.menu--themed {
+  --menu-background: var(--theme-background);
+  --menu-foreground: var(--theme-foreground);
 }
 
 .menu__toggle {

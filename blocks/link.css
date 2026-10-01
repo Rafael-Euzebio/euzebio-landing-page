@@ -149,24 +149,24 @@
   color: var(--color-paper-warm);
 }
 
-.link--button-inverted-forest {
-  border-color: var(--color-paper-warm);
-  background-color: var(--color-paper-warm);
-  color: var(--color-forest-green);
+.link--button-inverted-themed {
+  border-color: var(--theme-foreground);
+  background-color: var(--theme-foreground);
+  color: var(--theme-background);
 }
 
-.link--button-inverted-forest:focus-visible:not(:active) {
-  background-color: var(--color-forest-green);
-  color: var(--color-paper-warm);
+.link--button-inverted-themed:focus-visible:not(:active) {
+  background-color: var(--theme-background);
+  color: var(--theme-foreground);
 }
 
-.link--button-inverted-forest:active {
-  background-color: var(--color-paper-warm);
-  color: var(--color-forest-green);
+.link--button-inverted-themed:active {
+  background-color: var(--theme-foreground);
+  color: var(--theme-background);
 }
 
-.link--button-inverted-forest:focus-visible {
-  outline-color: var(--color-paper-warm);
+.link--button-inverted-themed:focus-visible {
+  outline-color: var(--theme-foreground);
 }
 
 .link--button-semibold-hover:focus-visible {
@@ -214,9 +214,9 @@
     color: var(--color-paper-warm);
   }
 
-  .link--button-inverted-forest:hover:not(:active) {
-    background-color: var(--color-forest-green);
-    color: var(--color-paper-warm);
+  .link--button-inverted-themed:hover:not(:active) {
+    background-color: var(--theme-background);
+    color: var(--theme-foreground);
   }
 
   .link--button-semibold-hover:hover {
