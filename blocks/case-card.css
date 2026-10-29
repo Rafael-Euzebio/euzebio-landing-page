@@ -10,6 +10,24 @@
   background-color: var(--color-paper-warm);
 }
 
+.case-card__image--charcoal {
+  background-color: var(--color-charcoal-deep);
+}
+
+.case-card__image--slate {
+  background-color: var(--color-slate-blue);
+}
+
+.case-card__image--forest {
+  background-color: var(--color-forest-green);
+}
+
+.case-card__preview {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 .case-card__category {
   margin-bottom: 0.5rem;
   font-size: var(--font-size-small);

@@ -1,6 +1,8 @@
 .flow {
+  --flow-direction: column;
+  --flow-item-direction: row;
   display: flex;
-  flex-direction: column;
+  flex-direction: var(--flow-direction);
   margin: 0;
   padding: 0;
   list-style: none;
@@ -8,6 +10,8 @@
 
 .flow__item {
   display: flex;
+  flex: 1;
+  flex-direction: var(--flow-item-direction);
   gap: 1.5rem;
   padding: 1.5rem 0;
   border-top: 1px solid currentColor;
@@ -33,22 +37,15 @@
 }
 
 .flow--horizontal {
-  flex-direction: row;
+  --flow-direction: row;
+  --flow-item-direction: column;
   gap: 2rem;
-}
-
-.flow--horizontal .flow__item {
-  flex: 1;
-  flex-direction: column;
 }
 
 @media (max-width: 64em) {
   .flow--horizontal {
-    flex-direction: column;
+    --flow-direction: column;
+    --flow-item-direction: row;
     gap: 0;
-  }
-
-  .flow--horizontal .flow__item {
-    flex-direction: row;
   }
 }
