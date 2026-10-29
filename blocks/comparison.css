@@ -1,0 +1,53 @@
+.comparison {
+  display: flex;
+  gap: 3rem;
+}
+
+.comparison__side {
+  flex: 1;
+  min-width: 0;
+}
+
+.comparison__label {
+  margin-bottom: 1rem;
+  font-size: var(--font-size-small);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.comparison__title {
+  margin-bottom: 1rem;
+  font-size: var(--font-size-heading-small);
+  line-height: 1.3;
+}
+
+.comparison__text {
+  line-height: 1.7;
+}
+
+.comparison__range {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.comparison__segment {
+  flex: 1;
+  padding: 1rem;
+  border: 1px solid currentColor;
+  font-size: var(--font-size-small);
+  line-height: 1.5;
+}
+
+.comparison__segment--fixed {
+  background-color: var(--color-slate-blue);
+  color: var(--color-paper-warm);
+}
+
+@media (max-width: 40em) {
+  .comparison {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}

@@ -1,0 +1,38 @@
+.evidence {
+  padding: 2rem;
+  border: 1px solid var(--color-paper-border);
+  background-color: var(--color-paper-warm);
+  color: var(--color-charcoal-deep);
+}
+
+.evidence__label {
+  margin-bottom: 1.5rem;
+  font-size: var(--font-size-small);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.evidence__image {
+  width: 100%;
+  height: auto;
+}
+
+.evidence__caption {
+  max-width: 50rem;
+  margin-top: 1.5rem;
+  font-size: var(--font-size-small);
+  line-height: 1.7;
+}
+
+.evidence__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem 2rem;
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 40em) {
+  .evidence {
+    padding: 1rem;
+  }
+}

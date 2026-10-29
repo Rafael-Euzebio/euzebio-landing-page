@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quando uma falha técnica interrompe o trabalho | EUZEBIO</title>
+    <meta name="description" content="Como diagnostiquei e estabilizei a comunicação de sistemas de vendas em duas unidades de varejo, com validação na operação real.">
+    <meta name="theme-color" content="#FAF6F0">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Quando uma falha técnica interrompe o trabalho | EUZEBIO">
+    <meta property="og:description" content="Como diagnostiquei e estabilizei a comunicação de sistemas de vendas em duas unidades de varejo, com validação na operação real.">
+    <meta property="og:url" content="https://euzebio.xyz/casos/continuidade-varejo/">
+    <meta property="og:locale" content="pt_BR">
+    <link rel="canonical" href="https://euzebio.xyz/casos/continuidade-varejo/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/reset.css">
+    <link rel="stylesheet" href="/tokens.css">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/blocks/navbar.css">
+    <link rel="stylesheet" href="/blocks/link.css">
+    <link rel="stylesheet" href="/blocks/menu.css">
+    <link rel="stylesheet" href="/blocks/footer.css">
+    <link rel="stylesheet" href="/blocks/study-intro.css">
+    <link rel="stylesheet" href="/blocks/chapter.css">
+    <link rel="stylesheet" href="/blocks/prose.css">
+    <link rel="stylesheet" href="/blocks/evidence.css">
+    <link rel="stylesheet" href="/blocks/flow.css">
+    <link rel="stylesheet" href="/blocks/metrics.css">
+    <link rel="stylesheet" href="/blocks/comparison.css">
+    <link rel="stylesheet" href="/blocks/practice.css">
+    <script src="/blocks/menu.js" defer></script>
+    <script src="/blocks/navbar.js" defer></script>
+  </head>
+  <body id="topo">
+    <header class="navbar">
+      <a class="link navbar__brand" href="/" aria-label="Rafael Euzebio — página inicial">
+        <span class="navbar__mark" aria-hidden="true">
+          <img class="navbar__logo navbar__logo--charcoal" src="/assets/brand/euzebio-mark-deep-coal.png" alt="">
+          <img class="navbar__logo navbar__logo--paper" src="/assets/brand/euzebio-mark-warm-paper.png" alt="">
+        </span>
+        <span class="navbar__wordmark" aria-hidden="true">
+          <img class="navbar__logo navbar__logo--charcoal" src="/assets/brand/wordmark-deep-coal.png" alt="">
+          <img class="navbar__logo navbar__logo--paper" src="/assets/brand/wordmark-warm-paper.png" alt="">
+        </span>
+      </a>
+
+      <nav class="menu menu--themed" aria-label="Navegação principal">
+        <button class="menu__toggle" type="button" aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir menu">
+          <svg class="menu__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path class="menu__line menu__line--top" d="M4 6h16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
+            <path class="menu__line menu__line--middle" d="M4 12h16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
+            <path class="menu__line menu__line--bottom" d="M4 18h16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
+          </svg>
+        </button>
+        <ul class="menu__list" id="menu-principal">
+          <li class="menu__item"><a class="link link--underlined link--underline-at-navbar-edge link--hover-lift" href="/#inicio">Início</a></li>
+          <li class="menu__item"><a class="link link--underlined link--underline-at-navbar-edge link--hover-lift" href="/#como-trabalho">Como trabalho</a></li>
+          <li class="menu__item"><a class="link link--underlined link--underline-at-navbar-edge link--hover-forest link--hover-lift" href="/#casos">Casos</a></li>
+          <li class="menu__item"><a class="link link--button link--button-slate" href="/#contato">Fale comigo</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="study-intro" aria-labelledby="caso-titulo">
+        <a class="link link--underline-thin study-intro__back" href="/#casos">← Casos selecionados</a>
+        <div class="study-intro__layout">
+          <div class="study-intro__content">
+            <p class="study-intro__eyebrow">Estudo de caso · Operação e tecnologia</p>
+            <h1 class="study-intro__title" id="caso-titulo">Quando uma falha técnica interrompe o trabalho</h1>
+            <p class="study-intro__lead">O sistema de vendas falhava. Para recuperar a operação, precisei entender o que conectava servidor, terminais, rede local e fornecedor — e encontrar uma mudança compatível com as condições de cada loja.</p>
+          </div>
+          <figure class="study-intro__visual"><img class="study-intro__image" src="/assets/cases/continuidade-varejo.svg" alt="" width="720" height="520"></figure>
+        </div>
+        <dl class="study-intro__facts"><div><dt class="study-intro__fact-title">Contexto</dt><dd class="study-intro__fact-value">Duas unidades de varejo · maio e agosto de 2026</dd></div><div><dt class="study-intro__fact-title">Minha atuação</dt><dd class="study-intro__fact-value">Diagnóstico, intervenção remota e coordenação dos testes</dd></div><div><dt class="study-intro__fact-title">Resultado</dt><dd class="study-intro__fact-value">Continuidade confirmada e operação de venda e impressão validada</dd></div></dl>
+      </section>      <section class="chapter chapter--charcoal" data-navbar-theme="charcoal" aria-labelledby="capitulo-01">
+        <div class="chapter__layout">
+          <div class="chapter__intro">
+            <h2 class="chapter__title" id="capitulo-01"><span class="chapter__number" aria-hidden="true">01</span>O pedido era técnico. O problema era operacional.</h2>
+            <p class="chapter__lead">A tela do sistema mostrava o sintoma. A investigação precisava alcançar a estrutura que o mantinha funcionando.</p>
+          </div>
+          <div class="chapter__body"><div class="prose"><p>Quando uma equipe não consegue registrar suas vendas, a falha deixa de ser apenas um assunto de tecnologia. Ela interrompe uma atividade central do negócio e exige coordenação entre quem opera a loja, quem mantém o sistema e quem pode ajustar a infraestrutura.</p><p>Em maio de 2026, fui procurado para estabilizar o endereço de uma máquina utilizada por uma unidade de varejo. O pedido inicial era “deixar o IP fixo”. Antes de alterar qualquer configuração, eu precisava descobrir qual equipamento recebia as conexões, como os terminais o encontravam e quais mudanças estavam ao alcance da equipe.</p><p>O sistema dependia de um servidor local. A rede era parte dessa dependência, mas determinados ajustes não eram assumidos pelo suporte do fornecedor. Ao mesmo tempo, as configurações internas dos terminais estavam protegidas por acesso restrito. Resolver o problema exigia trabalhar nessa fronteira entre responsabilidades.</p></div></div>
+        </div>
+        
+      </section>      <section class="chapter" aria-labelledby="capitulo-02">
+        <div class="chapter__layout">
+          <div class="chapter__intro">
+            <h2 class="chapter__title" id="capitulo-02"><span class="chapter__number" aria-hidden="true">02</span>Primeiro, entender quem dependia de quem.</h2>
+            
+          </div>
+          <div class="chapter__body"><div class="prose"><p>Identifiquei que a máquina principal também exercia a função de servidor. Era ela que precisava ser encontrada em um endereço estável; os terminais clientes não precisavam receber endereços fixos apenas para acessá-la.</p><p>A reserva de endereço no equipamento de rede não estava disponível no acesso existente. Escolhi configurar o servidor fora da faixa informada de distribuição automática e registrei os parâmetros utilizados. Assim, a solução respeitava a limitação do equipamento e separava o endereço do servidor dos endereços oferecidos aos demais dispositivos.</p><p>Como parte das telas do sistema dependia do fornecedor, repassei os parâmetros à equipe para coordenar o ajuste complementar. Um técnico do fornecedor concluiu essa configuração. Minha intervenção estabilizou a infraestrutura necessária e tornou o próximo passo executável para os envolvidos.</p></div></div>
+        </div>
+        <div class="chapter__visual"><figure class="evidence"><p class="evidence__label">Mapa da dependência operacional</p><img class="evidence__image" src="/assets/cases/continuidade-varejo.svg" alt="Os terminais usam a rede local para alcançar o servidor, que concentra o sistema e o banco de dados." width="720" height="520" loading="lazy"><figcaption class="evidence__caption">Reconstrução explicativa baseada nos registros dos atendimentos. O equipamento que parecia apenas um terminal também sustentava o acesso dos demais. Nomes das unidades e parâmetros reais de rede foram omitidos.</figcaption></figure></div>
+      </section>      <section class="chapter chapter--forest" data-navbar-theme="forest" aria-labelledby="capitulo-03">
+        <div class="chapter__layout">
+          <div class="chapter__intro">
+            <h2 class="chapter__title" id="capitulo-03"><span class="chapter__number" aria-hidden="true">03</span>A confiança levou a outra loja. O diagnóstico começou de novo.</h2>
+            <p class="chapter__lead">Um pedido semelhante não tornava os ambientes equivalentes. A decisão dependia do que a segunda rede realmente permitia.</p>
+          </div>
+          <div class="chapter__body"><div class="prose"><p>Meses depois, o responsável pela primeira unidade confirmou que o sistema permanecia funcionando, inclusive após interrupções de energia. Essa continuidade gerou uma indicação para outra loja.</p><p>Em agosto de 2026, a segunda unidade relatava perdas de comunicação entre terminais e servidor. Embora o pedido fosse parecido, eu não podia assumir que a configuração anterior serviria. Confirmei as funções dos equipamentos por processos, serviços e conexões efetivamente observados. Uma das máquinas acumulava as funções de terminal, servidor de aplicação e banco de dados.</p><p>A descoberta decisiva estava no roteador: a faixa de distribuição automática de endereços abrangia praticamente toda a rede, incluindo o endereço já utilizado pelo servidor. Fixar esse endereço no computador e manter a faixa como estava deixaria aberta a possibilidade de outro dispositivo recebê-lo.</p></div></div>
+        </div>
+        
+      </section>      <section class="chapter" aria-labelledby="capitulo-04">
+        <div class="chapter__layout">
+          <div class="chapter__intro">
+            <h2 class="chapter__title" id="capitulo-04"><span class="chapter__number" aria-hidden="true">04</span>Preservar o que já funcionava reduziu o atrito.</h2>
+            
+          </div>
+          <div class="chapter__body"><div class="prose"><p>Os terminais já procuravam o servidor em um endereço específico. Alterar esse destino exigiria acesso protegido pelo fornecedor. A reserva pelo roteador também não estava disponível na interface acessível.</p><p>Escolhi manter o endereço utilizado pelo servidor, configurá-lo de forma estática e ajustar a faixa de distribuição automática para excluí-lo. Dessa forma, o endereço conhecido pelos terminais permanecia igual, enquanto a rede deixava de oferecê-lo a outros equipamentos.</p><p>A intervenção foi conduzida remotamente, com participação da equipe local. Considerei o efeito da reinicialização do roteador e a possibilidade de perder temporariamente o acesso. Depois da mudança, conferi os parâmetros e a comunicação entre os componentes antes de passar ao teste operacional.</p></div></div>
+        </div>
+        <div class="chapter__visual"><figure class="evidence"><p class="evidence__label">A decisão na segunda unidade</p><div class="comparison"><div class="comparison__side"><p class="comparison__label">Antes</p><h3 class="comparison__title">O endereço do servidor também estava na faixa automática.</h3><p class="comparison__text">Fixá-lo apenas no computador manteria um risco de conflito com a distribuição da rede.</p><div class="comparison__range"><span class="comparison__segment">Faixa automática<br>inclui o servidor</span></div></div><div class="comparison__side"><p class="comparison__label">Depois</p><h3 class="comparison__title">Servidor separado. Terminais preservados.</h3><p class="comparison__text">O servidor manteve o endereço conhecido pelos clientes e ficou fora da faixa distribuída automaticamente.</p><div class="comparison__range"><span class="comparison__segment comparison__segment--fixed">Servidor<br>endereço estável</span><span class="comparison__segment">Demais dispositivos<br>faixa automática</span></div></div></div><figcaption class="evidence__caption">Esquema conceitual da alteração documentada. A comparação mostra a organização dos endereços, sem expor a configuração da loja.</figcaption></figure></div>
+      </section>      <section class="chapter chapter--charcoal" data-navbar-theme="charcoal" aria-labelledby="capitulo-05">
+        <div class="chapter__layout">
+          <div class="chapter__intro">
+            <h2 class="chapter__title" id="capitulo-05"><span class="chapter__number" aria-hidden="true">05</span>A validação precisava chegar ao balcão.</h2>
+            
+          </div>
+          <div class="chapter__body"><div class="prose"><p>Uma resposta de rede confirmava apenas parte da solução. Na segunda unidade, a equipe realizou uma operação de venda e verificou a impressão. Esse teste conectou a alteração técnica à atividade que precisava continuar funcionando.</p><p>Os dois atendimentos produziram evidências diferentes e complementares: na primeira unidade, houve confirmação posterior de continuidade pelo responsável; na segunda, houve validação funcional ao concluir a intervenção. Os parâmetros e decisões relevantes ficaram registrados para consulta.</p><p>O trabalho exigiu reconstruir uma dependência, escolher uma mudança proporcional às restrições e coordenar pessoas com acessos diferentes. É esse encadeamento que permite tratar uma falha percebida no sistema como um problema concreto de operação.</p></div></div>
+        </div>
+        <div class="chapter__visual"><dl class="metrics"><div class="metrics__item"><dt class="metrics__value">2</dt><dd class="metrics__label">unidades atendidas em contextos distintos</dd></div><div class="metrics__item"><dt class="metrics__value">Maio → agosto</dt><dd class="metrics__label">continuidade relatada na primeira unidade</dd></div><div class="metrics__item"><dt class="metrics__value">Venda + impressão</dt><dd class="metrics__label">teste realizado pela equipe na segunda unidade</dd></div></dl></div>
+      </section>      <section class="chapter chapter--slate" data-navbar-theme="slate" aria-labelledby="conversa-titulo">
+        <h2 class="chapter__title" id="conversa-titulo">Há uma falha que vive interrompendo o trabalho?</h2>
+        <p class="chapter__lead">Podemos começar entendendo o que depende de quê, quais restrições existem e qual mudança faz sentido para sua operação.</p>
+        <div class="chapter__actions"><a class="link link--button link--button-inverted-themed" href="/#contato">Conte o que está acontecendo →</a><a class="link link--paper link--underline-from-left link--underline-thin" href="/#casos">Todos os casos</a></div>
+        <div class="chapter__related"><p>Continue explorando</p><a class="link link--paper link--underline-from-left link--underline-thin" href="/casos/violeta-eliz/">Da base existente ao site publicado →</a></div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__main">
+        <a class="link" href="/" aria-label="EUZEBIO — início"><img class="footer__wordmark" src="/assets/brand/wordmark-warm-paper.png" alt="EUZEBIO" width="234" height="24"></a>
+        <nav class="footer__nav" aria-label="Navegação do rodapé">
+          <a class="link link--paper" href="/#como-trabalho">Como trabalho</a>
+          <a class="link link--paper" href="/#casos">Casos</a>
+          <a class="link link--paper" href="/#contato">Fale comigo</a>
+        </nav>
+        <a class="link link--paper" href="mailto:rafael@euzebio.xyz">rafael@euzebio.xyz</a>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; <time datetime="2026">2026</time> Rafael Euzebio</p>
+        <a class="link link--paper" href="/privacidade/">Privacidade</a>
+        <a class="link link--paper" href="#topo">Voltar ao início ↑</a>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+.metrics {
+  display: flex;
+  gap: 3rem;
+  margin-top: 3rem;
+  padding: 2rem 0;
+  border-top: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+}
+
+.metrics__item {
+  flex: 1;
+}
+
+.metrics__value {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-heading);
+  font-size: var(--font-size-heading-medium);
+  line-height: 1.2;
+}
+
+.metrics__label {
+  max-width: 24ch;
+  line-height: 1.6;
+}
+
+@media (max-width: 40em) {
+  .metrics {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
