@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" role="img" aria-labelledby="title desc">
+  <title id="title">Uma competência prepara a próxima</title>
+  <desc id="desc">Cinco arcos conectam modelagem, consultas, relações, administração e análise com Power BI.</desc>
+  <rect width="720" height="520" fill="#3E5A4B"/>
+  <path d="M76 66v372" fill="none" stroke="#FAF6F0" stroke-width="2"/>
+  <g fill="#3E5A4B" stroke="#FAF6F0" stroke-width="2">
+    <circle cx="76" cy="66" r="22"/><circle cx="76" cy="159" r="22"/>
+    <circle cx="76" cy="252" r="22"/><circle cx="76" cy="345" r="22"/>
+    <circle cx="76" cy="438" r="22"/>
+  </g>
+  <g fill="#FAF6F0" font-family="sans-serif">
+    <g text-anchor="middle" font-size="19"><text x="76" y="73">01</text><text x="76" y="166">02</text><text x="76" y="259">03</text><text x="76" y="352">04</text><text x="76" y="445">05</text></g>
+    <g font-size="27"><text x="128" y="65">Modelar o problema</text><text x="128" y="158">Ganhar fluência em SQL</text><text x="128" y="251">Relacionar e escolher</text><text x="128" y="344">Administrar o ambiente</text><text x="128" y="437">Transformar e analisar</text></g>
+    <g font-size="18"><text x="128" y="94">Situações, tabelas e relações</text><text x="128" y="187">Consultas, filtros e agrupamentos</text><text x="128" y="280">JOINs, conjuntos e subqueries</text><text x="128" y="373">Acesso, desempenho e portabilidade</text><text x="128" y="466">Power Query e modelos no Power BI</text></g>
+  </g>
+</svg>
