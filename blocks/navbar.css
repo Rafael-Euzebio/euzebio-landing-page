@@ -30,8 +30,13 @@
   --theme-background: var(--color-charcoal-deep);
 }
 
+.navbar--slate {
+  --theme-background: var(--color-slate-blue);
+}
+
 .navbar--forest,
-.navbar--charcoal {
+.navbar--charcoal,
+.navbar--slate {
   --theme-foreground: var(--color-paper-warm);
   --navbar-border: var(--color-paper-warm);
   --navbar-logo-charcoal-opacity: 0;

@@ -1,0 +1,42 @@
+.footer {
+  padding: 3rem var(--page-gutter) 1.5rem;
+  background-color: var(--color-charcoal-deep);
+  color: var(--color-paper-warm);
+}
+
+.footer__main,
+.footer__bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.footer__wordmark {
+  width: 11rem;
+  height: auto;
+}
+
+.footer__nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem 2rem;
+}
+
+.footer__bottom {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-paper-warm);
+  font-size: var(--font-size-small);
+}
+
+/* Corresponde ao token --breakpoint-compact: 40em em tokens.css. */
+@media (max-width: 40em) {
+  .footer__main,
+  .footer__bottom {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}

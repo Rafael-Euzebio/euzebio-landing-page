@@ -3,7 +3,7 @@ const sections = document.querySelectorAll("main > section");
 
 if (navbar) {
   const links = navbar.querySelectorAll(".link:not(.link--button)");
-  const casesLink = navbar.querySelector('.link[href="#casos"]');
+  const casesLink = navbar.querySelector('.link[href$="#casos"]');
   const contactLink = navbar.querySelector(".link--button");
   let observer;
   let currentTheme = null;

@@ -18,15 +18,17 @@
     <link rel="stylesheet" href="blocks/cases.css">
     <link rel="stylesheet" href="blocks/method.css">
     <link rel="stylesheet" href="blocks/about.css">
+    <link rel="stylesheet" href="blocks/contact.css">
+    <link rel="stylesheet" href="blocks/footer.css">
     <link rel="stylesheet" href="blocks/navbar.css">
     <link rel="stylesheet" href="blocks/link.css">
     <link rel="stylesheet" href="blocks/case-card.css">
     <link rel="stylesheet" href="blocks/menu.css">
 
-    <!-- Atualize o endereço quando o domínio definitivo estiver publicado. -->
     <link rel="canonical" href="https://euzebio.xyz/">
     <script src="blocks/menu.js" defer></script>
     <script src="blocks/navbar.js" defer></script>
+    <script src="https://tally.so/widgets/embed.js" async></script>
   </head>
   <body>
     <header class="navbar">
@@ -245,16 +247,40 @@
         <img class="about__photo" src="assets/images/rafael-euzebio.jpg" alt="Rafael Euzebio" width="640" height="640" loading="lazy">
       </section>
 
-      <section id="contato" aria-labelledby="contato-titulo">
-        <h2 id="contato-titulo">Vamos conversar?</h2>
-        <p>O primeiro contato serve para entender o contexto e avaliar qual pode ser o próximo passo.</p>
-        <p><a class="link" href="mailto:rafael@euzebio.xyz">rafael@euzebio.xyz</a></p>
+      <section id="contato" class="contact" data-navbar-theme="slate" aria-labelledby="contato-titulo">
+        <div class="contact__intro">
+          <h2 class="contact__title" id="contato-titulo">
+            <span class="contact__number" aria-hidden="true">05</span>
+            Vamos conversar.
+          </h2>
+          <p class="contact__description">Não precisa chegar com um diagnóstico pronto. Conte o que está acontecendo no seu negócio ou projeto e o que gostaria de melhorar. A partir disso, podemos avaliar se faz sentido trabalhar juntos e qual seria o próximo passo.</p>
+          <p class="contact__alternative">
+            Prefere escrever diretamente?
+            <a class="link link--paper link--underline-from-left link--underline-thin" href="mailto:rafael@euzebio.xyz">rafael@euzebio.xyz</a>
+          </p>
+        </div>
+        <div class="contact__form">
+          <iframe class="contact__embed" data-tally-src="https://tally.so/embed/OQQZEk?alignLeft=1&amp;hideTitle=1&amp;dynamicHeight=1" loading="lazy" width="600" height="480" title="Contato — conte o que está acontecendo"></iframe>
+          <p class="contact__notice">Se preferir, <a class="link link--underline-thin" href="https://tally.so/r/OQQZEk">abra o formulário em outra página</a>. Veja como as informações são utilizadas no <a class="link link--underline-thin" href="/privacidade/">aviso de privacidade</a>.</p>
+        </div>
       </section>
     </main>
 
-    <footer>
-      <p>&copy; <time datetime="2026">2026</time> Rafael Euzebio</p>
-      <address><a class="link" href="mailto:rafael@euzebio.xyz">rafael@euzebio.xyz</a></address>
+    <footer class="footer">
+      <div class="footer__main">
+        <a class="link" href="/" aria-label="EUZEBIO — início"><img class="footer__wordmark" src="/assets/brand/wordmark-warm-paper.png" alt="EUZEBIO" width="234" height="24"></a>
+        <nav class="footer__nav" aria-label="Navegação do rodapé">
+          <a class="link link--paper" href="/#como-trabalho">Como trabalho</a>
+          <a class="link link--paper" href="/#casos">Casos</a>
+          <a class="link link--paper" href="/#contato">Fale comigo</a>
+        </nav>
+        <a class="link link--paper" href="mailto:rafael@euzebio.xyz">rafael@euzebio.xyz</a>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; <time datetime="2026">2026</time> Rafael Euzebio</p>
+        <a class="link link--paper" href="/privacidade/">Privacidade</a>
+        <a class="link link--paper" href="#inicio">Voltar ao início ↑</a>
+      </div>
     </footer>
   </body>
 </html>
