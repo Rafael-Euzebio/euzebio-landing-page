@@ -10,6 +10,10 @@ html {
   text-size-adjust: 100%;
 }
 
+a {
+  color: inherit;
+}
+
 body,
 h1,
 h2,
