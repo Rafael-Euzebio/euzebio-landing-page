@@ -1,5 +1,4 @@
 .cases {
-  min-height: 100svh;
   padding-top: clamp(6rem, 15vh, 12rem);
   padding-bottom: clamp(6rem, 15vh, 12rem);
   padding-right: var(--page-gutter);

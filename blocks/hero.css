@@ -1,5 +1,4 @@
 .hero {
-  min-height: calc(100svh - var(--navbar-height));
   padding-top: clamp(6rem, 15vh, 12rem);
   padding-bottom: 3rem;
   padding-left: var(--page-gutter);
