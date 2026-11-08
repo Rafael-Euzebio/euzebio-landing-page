@@ -65,13 +65,8 @@
 }
 
 .case-card__description {
-  display: -webkit-box;
   margin-bottom: 1.5rem;
-  overflow: hidden;
   line-height: 1.5;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-  line-clamp: 3;
 }
 
 .case-card__link {
@@ -100,7 +95,7 @@
   }
 
   .case-card__description {
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
     line-height: 1.4;
   }
 }
