@@ -42,6 +42,12 @@
   max-width: 40rem;
 }
 
+.evidence--flush-rounded {
+  padding: 0;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
 .evidence--unframed {
   padding: 0;
   border: 0;
