@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Da base existente ao site publicado | EUZEBIO</title>
-    <meta name="description" content="Como conectei planejamento técnico, desenvolvimento e revisão em uma entrega coletiva para o site institucional da Violeta Eliz.">
+    <title>O trabalho da ONG continuava. O projeto do site, não. | EUZEBIO</title>
+    <meta name="description" content="Recrutei e coordenei uma equipe de desenvolvedores para retomar um projeto estagnado, reconstruir sua base técnica e entregar o site institucional de uma organização que apoia mulheres em situação de vulnerabilidade.">
     <meta name="theme-color" content="#FAF6F0">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Da base existente ao site publicado | EUZEBIO">
-    <meta property="og:description" content="Como conectei planejamento técnico, desenvolvimento e revisão em uma entrega coletiva para o site institucional da Violeta Eliz.">
+    <meta property="og:title" content="O trabalho da ONG continuava. O projeto do site, não. | EUZEBIO">
+    <meta property="og:description" content="Recrutei e coordenei uma equipe de desenvolvedores para retomar um projeto estagnado, reconstruir sua base técnica e entregar o site institucional de uma organização que apoia mulheres em situação de vulnerabilidade.">
     <meta property="og:url" content="https://euzebio.xyz/casos/violeta-eliz/">
     <meta property="og:locale" content="pt_BR">
     <link rel="canonical" href="https://euzebio.xyz/casos/violeta-eliz/">
@@ -63,69 +63,106 @@
       </nav>
     </header>
     <main>
-      <section class="study-intro" aria-labelledby="caso-titulo">
-        <a class="link link--underline-thin study-intro__back" href="/#casos">← Casos selecionados</a>
-        <div class="study-intro__layout">
-          <div class="study-intro__content">
-            <p class="study-intro__eyebrow">Estudo de caso · Entrega digital e colaboração</p>
-            <h1 class="study-intro__title" id="caso-titulo">Da base existente ao site publicado</h1>
-            <p class="study-intro__lead">Em um projeto coletivo, produzir código é parte do caminho. Minha contribuição foi conectar requisitos, decisões técnicas, implementação e revisão para ajudar uma equipe a chegar a uma entrega integrada.</p>
-          </div>
-          <figure class="study-intro__visual"><img class="study-intro__image" src="/assets/cases/violeta-eliz.svg" alt="" width="720" height="520"></figure>
-        </div>
-        <dl class="study-intro__facts"><div><dt class="study-intro__fact-title">Projeto</dt><dd class="study-intro__fact-value">Associação Cultural e Educacional Violeta Eliz · Frontend Fusion</dd></div><div><dt class="study-intro__fact-title">Ciclo documentado</dt><dd class="study-intro__fact-value">Maio de 2025 a abril de 2026</dd></div><div><dt class="study-intro__fact-title">Minha atuação</dt><dd class="study-intro__fact-value">Planejamento técnico, desenvolvimento, revisão e integração</dd></div></dl>
-      </section>      <section class="chapter chapter--forest" data-navbar-theme="forest" aria-labelledby="capitulo-01">
-        <div class="chapter__layout">
-          <div class="chapter__intro">
-            <h2 class="chapter__title" id="capitulo-01"><span class="chapter__number" aria-hidden="true">01</span>Havia design, código e pessoas. Faltava conectar o conjunto.</h2>
-            
-          </div>
-          <div class="chapter__body"><div class="prose"><p>O site institucional da Violeta Eliz já tinha uma história quando passei a atuar com mais intensidade. Existiam referências de interface, código e contribuições anteriores. A equipe da Frontend Fusion reunia pessoas com experiências diferentes em um projeto colaborativo para uma organização social.</p><p>A base apresentava componentes e responsabilidades pouco organizados, diferenças entre o design e a implementação e pontos de responsividade e acessibilidade a resolver. Em paralelo, funcionalidades amplas precisavam virar tarefas que outras pessoas conseguissem desenvolver e verificar.</p><p>Passei a atuar entre essas frentes: detalhando trabalho, orientando integrantes, desenvolvendo, revisando e integrando contribuições. A aplicação usava Next.js, TypeScript e Tailwind; Figma, Taiga, GitHub e Discord apoiavam o trabalho. O desafio era manter continuidade entre o que era pedido, o que cada pessoa fazia e o que chegava ao produto.</p></div></div>
-        </div>
-        
-      </section>      <section class="chapter" aria-labelledby="capitulo-02">
-        <div class="chapter__layout">
-          <div class="chapter__intro">
-            <h2 class="chapter__title" id="capitulo-02"><span class="chapter__number" aria-hidden="true">02</span>Uma funcionalidade precisava virar trabalho executável.</h2>
-            
-          </div>
-          <div class="chapter__body"><div class="prose"><p>O fluxo de doação por Pix ajuda a tornar essa atuação concreta. Um pedido como “implementar a doação” ainda deixa várias decisões abertas: como preservar o valor escolhido, como gerar o QR Code, como oferecer o código de pagamento e como permitir a cópia em telas diferentes.</p><p>Decompus esse fluxo em tarefas técnicas separadas, com referências visuais e comportamentos esperados. Isso permitia distribuir responsabilidades e revisar cada parte sem perder de vista a experiência completa.</p><p>Na tarefa sobre o valor da doação, o detalhamento que criei no Taiga foi seguido por implementação direta: abri o PR #54, com armazenamento global via Zustand, incorporado em julho de 2025. Na geração e cópia do Pix, outra integrante implementou o PR #58, que revisei e aprovei. O mesmo fluxo reuniu contribuição individual e colaboração com critérios explícitos.</p></div></div>
-        </div>
-        <div class="chapter__visual"><figure class="evidence"><p class="evidence__label">Do requisito à experiência de doação</p><ol class="flow flow--horizontal"><li class="flow__item"><span class="flow__number" aria-hidden="true">01</span><div><h3 class="flow__title">Preservar o valor</h3><p class="flow__text">Manter a escolha ao longo do fluxo. Tarefa #61 no Taiga e implementação no PR #54.</p></div></li><li class="flow__item"><span class="flow__number" aria-hidden="true">02</span><div><h3 class="flow__title">Gerar o pagamento</h3><p class="flow__text">QR Code, BR Code e ação de cópia detalhados como comportamentos verificáveis.</p></div></li><li class="flow__item"><span class="flow__number" aria-hidden="true">03</span><div><h3 class="flow__title">Revisar e integrar</h3><p class="flow__text">Implementação colaborativa no PR #58, com minha revisão e aprovação.</p></div></li></ol><figcaption class="evidence__caption">Reconstrução das cadeias documentadas de tarefa, implementação e integração. O fluxo mostra como responsabilidades distintas se encontram em uma experiência única.</figcaption><div class="evidence__links"><a class="link link--underline-thin" href="https://github.com/Projeto-FrontEnd-Fusion/Aceve-website-development/pull/54">Inspecionar o PR #54 ↗</a><a class="link link--underline-thin" href="https://github.com/Projeto-FrontEnd-Fusion/Aceve-website-development/pull/58">Inspecionar o PR #58 ↗</a></div></figure></div>
-      </section>      <section class="chapter chapter--charcoal" data-navbar-theme="charcoal" aria-labelledby="capitulo-03">
-        <div class="chapter__layout">
-          <div class="chapter__intro">
-            <h2 class="chapter__title" id="capitulo-03"><span class="chapter__number" aria-hidden="true">03</span>A arquitetura também precisava ser compreendida pelo time.</h2>
-            
-          </div>
-          <div class="chapter__body"><div class="prose"><p>O crescimento da pasta de componentes expunha outro problema: a organização do código não ajudava a explicar o que era específico de uma funcionalidade e o que era compartilhado pela aplicação.</p><p>Apresentei o problema ao time, consultei integrantes com experiência em Next.js, pesquisei alternativas e incorporei sugestões à proposta. A decisão adotada organizava a aplicação por features e delimitava o código global. Documentei a estrutura e comuniquei suas consequências para que a mudança pudesse ser utilizada nas próximas contribuições.</p><p>O PR #61 reuniu essa reorganização em 31 arquivos alterados. A entrega incluía explicar dependências, componentes compartilhados, tokens e imports. A nova estrutura precisava orientar o trabalho cotidiano, além de existir no repositório.</p></div></div>
-        </div>
-        <div class="chapter__visual"><figure class="evidence"><p class="evidence__label">A organização como ferramenta de colaboração</p><div class="comparison"><div class="comparison__side"><p class="comparison__label">Problema observado</p><h3 class="comparison__title">Uma base difícil de navegar.</h3><p class="comparison__text">Componentes e responsabilidades pouco organizados tornavam menos evidente onde desenvolver e como reaproveitar o que já existia.</p></div><div class="comparison__side"><p class="comparison__label">Decisão adotada</p><h3 class="comparison__title">Features + código compartilhado.</h3><p class="comparison__text">Uma organização discutida, implementada e documentada para orientar novas contribuições e a relação entre partes da aplicação.</p></div></div><figcaption class="evidence__caption">Síntese da decisão arquitetural documentada no projeto.</figcaption><div class="evidence__links"><a class="link link--underline-thin" href="https://github.com/Projeto-FrontEnd-Fusion/Aceve-website-development/pull/61">Ver a alteração no PR #61 ↗</a></div></figure></div>
-      </section>      <section class="chapter" aria-labelledby="capitulo-04">
-        <div class="chapter__layout">
-          <div class="chapter__intro">
-            <h2 class="chapter__title" id="capitulo-04"><span class="chapter__number" aria-hidden="true">04</span>Revisar era fechar o ciclo da entrega.</h2>
-            
-          </div>
-          <div class="chapter__body"><div class="prose"><p>Uma contribuição pronta para revisão precisava ser confrontada com requisitos, funcionamento, referência visual e integração. Nas minhas revisões, também observava semântica, acessibilidade, comportamento em telas diferentes e conflitos com outras mudanças.</p><p>O PR #38 preserva um exemplo desse ciclo. Solicitei mudanças; quatro commits corretivos trataram pontos como hover, alinhamento, fechamento por Esc e acessibilidade; depois houve reavaliação e aprovação. O registro torna visível a passagem entre uma primeira implementação e uma contribuição pronta para integrar.</p><p>Também desenvolvi ajustes de interface, componentes globais e documentação, removi artefatos obsoletos e organizei o ambiente local com Docker e Docker Compose quando o PostgreSQL passou a fazer parte da aplicação. As mudanças transversais eram comunicadas com o motivo, o impacto e as instruções de adoção.</p></div></div>
-        </div>
-        <div class="chapter__visual"><figure class="evidence"><p class="evidence__label">Uma revisão inspecionável · PR #38</p><ol class="flow flow--horizontal"><li class="flow__item"><span class="flow__number" aria-hidden="true">01</span><div><h3 class="flow__title">Pedido de mudanças</h3><p class="flow__text">Critérios de interação, apresentação e acessibilidade orientam a revisão.</p></div></li><li class="flow__item"><span class="flow__number" aria-hidden="true">02</span><div><h3 class="flow__title">Quatro commits corretivos</h3><p class="flow__text">A implementação é ajustada e volta para avaliação.</p></div></li><li class="flow__item"><span class="flow__number" aria-hidden="true">03</span><div><h3 class="flow__title">Reavaliação e aprovação</h3><p class="flow__text">O ciclo termina com a contribuição pronta para integração.</p></div></li></ol><figcaption class="evidence__caption">Sequência descrita nos registros documentais do caso. Cada etapa permite entender como a revisão participava da entrega.</figcaption><div class="evidence__links"><a class="link link--underline-thin" href="https://github.com/Projeto-FrontEnd-Fusion/Aceve-website-development/pull/38">Acompanhar a revisão no GitHub ↗</a></div></figure></div>
-      </section>      <section class="chapter chapter--forest" data-navbar-theme="forest" aria-labelledby="capitulo-05">
-        <div class="chapter__layout">
-          <div class="chapter__intro">
-            <h2 class="chapter__title" id="capitulo-05"><span class="chapter__number" aria-hidden="true">05</span>O resultado aparece no produto e no caminho até ele.</h2>
-            
-          </div>
-          <div class="chapter__body"><div class="prose"><p>No ciclo analisado, sete pessoas abriram 39 pull requests e 36 foram incorporados. Abri 14 PRs, todos mesclados, e revisei 21 dos 22 PRs mesclados abertos por outras pessoas. Esses registros mostram minha participação na execução e no fechamento das contribuições do time.</p><p>O produto resultante é um site institucional publicado em domínio próprio, com apresentação da organização, atuação, doação e voluntariado. A publicação está documentada em julho de 2026. Ela é uma entrega coletiva, apoiada tanto nas contribuições desse ciclo quanto no trabalho que já existia.</p><p>Minha contribuição conectou o detalhamento dos requisitos, as decisões técnicas, o desenvolvimento e a revisão. Esse encadeamento ajudou a transformar atividades paralelas em partes de um produto utilizável. É uma forma de trabalho aplicável quando uma equipe precisa organizar entregas digitais e manter critérios de qualidade compartilhados.</p></div></div>
-        </div>
-        <div class="chapter__visual"><dl class="metrics"><div class="metrics__item"><dt class="metrics__value">7</dt><dd class="metrics__label">pessoas contribuíram com PRs no ciclo analisado</dd></div><div class="metrics__item"><dt class="metrics__value">36</dt><dd class="metrics__label">pull requests incorporados de 39 abertos</dd></div><div class="metrics__item"><dt class="metrics__value">21 de 22</dt><dd class="metrics__label">PRs mesclados de outras pessoas revisados por mim</dd></div></dl><div class="chapter__actions"><a class="link link--paper link--underline-from-left link--underline-thin" href="https://violetaeliz.org.br/">Conhecer o site publicado ↗</a><a class="link link--paper link--underline-from-left link--underline-thin" href="https://github.com/Projeto-FrontEnd-Fusion/Aceve-website-development">Explorar o repositório ↗</a></div></div>
-      </section>      <section class="chapter chapter--slate" data-navbar-theme="slate" aria-labelledby="conversa-titulo">
-        <h2 class="chapter__title" id="conversa-titulo">O trabalho avança, mas a entrega não se conecta?</h2>
-        <p class="chapter__lead">Podemos olhar para requisitos, responsabilidades, decisões técnicas e revisão para entender o que está dificultando a passagem entre atividade e resultado.</p>
-        <div class="chapter__actions"><a class="link link--button link--button-inverted-themed" href="/#contato">Conte o que está acontecendo →</a><a class="link link--paper link--underline-from-left link--underline-thin" href="/#casos">Todos os casos</a></div>
-        <div class="chapter__related"><p>Continue explorando</p><a class="link link--paper link--underline-from-left link--underline-thin" href="/casos/curriculo-sql/">De conteúdo fragmentado a currículo integrado →</a></div>
-      </section>
-    </main>
+<section class="study-intro" aria-labelledby="caso-titulo">
+<a class="link link--underline-thin study-intro__back" href="/#casos">← Casos selecionados</a>
+<div class="study-intro__layout"><div class="study-intro__content">
+<p class="study-intro__eyebrow">ESTUDO DE CASO · ENTREGA DIGITAL E COLABORAÇÃO</p>
+<h1 class="study-intro__title" id="caso-titulo">O trabalho da ONG continuava. O projeto do site, não.</h1>
+<p class="study-intro__lead">A Associação Cultural e Educacional Violeta Eliz desenvolve projetos de acolhimento, educação e fortalecimento de pessoas em situação de vulnerabilidade, com atenção especial a mulheres que enfrentam violência doméstica e desamparo.</p>
+<p class="study-intro__lead">Sua fundadora, Elizangela, precisava de um site institucional que apresentasse a organização, transmitisse credibilidade e ajudasse novas pessoas a conhecer, apoiar e participar das suas iniciativas.</p>
+<p class="study-intro__lead">Mas o projeto do site estava estagnado havia cerca de um ano. Existiam um repositório, código e contribuições anteriores, porém grande parte daquele trabalho já não atendia às necessidades da entrega. O design precisava ser refeito e a equipe de desenvolvimento precisava ser reorganizada.</p>
+<p class="study-intro__lead">Assumi a retomada do projeto pela Frontend Fusion: recrutei desenvolvedores, coordenei o trabalho, participei da reconstrução técnica e ajudei a transformar contribuições individuais em uma entrega coletiva.</p>
+</div><figure class="study-intro__visual"><img class="study-intro__image" src="/assets/cases/empowered-women-on-the-rise.png" alt="Ilustração de mulheres em uma composição de autonomia e conquista." width="1672" height="941"></figure></div>
+<h2 class="prose__heading">Informações do projeto</h2>
+<dl class="study-intro__facts"><div><dt class="study-intro__fact-title">Organizações:</dt><dd class="study-intro__fact-value">Associação Cultural e Educacional Violeta Eliz e Frontend Fusion</dd></div><div><dt class="study-intro__fact-title">Período de atuação documentada:</dt><dd class="study-intro__fact-value">maio de 2025 a abril de 2026</dd></div><div><dt class="study-intro__fact-title">Minha atuação:</dt><dd class="study-intro__fact-value">recrutamento, coordenação, desenvolvimento, arquitetura colaborativa, revisão e orientação técnica</dd></div><div><dt class="study-intro__fact-title">Resultado:</dt><dd class="study-intro__fact-value">site institucional publicado em domínio próprio</dd></div></dl></section>
+<section class="chapter chapter--forest" data-navbar-theme="forest" aria-labelledby="capitulo-01"><div class="chapter__content"><h2 class="chapter__title" id="capitulo-01"><span class="chapter__number" aria-hidden="true">01</span>Uma causa em atividade. Um projeto sem avançar.</h2><div class="prose"><p>A Violeta Eliz não precisava começar sua atuação. Ela já tinha uma história, projetos sociais e pessoas atendidas.</p>
+<p>O que faltava era uma presença digital capaz de apresentar esse trabalho de maneira organizada e confiável.</p>
+<p>Um site institucional permitiria que alguém que ainda não conhecesse a associação entendesse sua missão, encontrasse seus projetos e descobrisse como contribuir por meio de doações ou voluntariado. Também serviria como uma referência pública para possíveis parceiros e apoiadores.</p>
+<p>O desenvolvimento, entretanto, não acompanhava essa necessidade.</p>
+<p>O projeto havia passado por contribuições anteriores, mas não avançara até uma entrega institucional concluída. A existência de um repositório e de código produzido não significava que a ONG tivesse o site de que precisava.</p>
+<p>A retomada exigiria mais do que encontrar alguém para terminar telas pendentes.</p>
+<p>Era necessário reconstruir a direção do trabalho: compreender o que ainda fazia sentido, decidir o que precisaria mudar, reunir pessoas para executar e estabelecer uma forma de transformar tarefas individuais em funcionalidades completas.</p>
+<p><strong>O desafio não era simplesmente voltar a programar. Era fazer o projeto voltar a avançar em direção a uma entrega útil para a ONG.</strong></p></div></div></section>
+<section class="chapter" aria-labelledby="capitulo-02"><div class="chapter__content"><h2 class="chapter__title" id="capitulo-02"><span class="chapter__number" aria-hidden="true">02</span>Retomar o projeto não significava preservar tudo.</h2><div class="prose"><p>Uma das primeiras decisões foi reconhecer que parte do trabalho anterior não deveria continuar determinando a direção do projeto.</p>
+<p>O design precisou ser refeito. A implementação existente também acumulava componentes, rotas e estruturas que já não correspondiam ao produto que queríamos entregar.</p>
+<p>Manter tudo aquilo por ter sido desenvolvido anteriormente significaria carregar complexidade para a nova equipe, inclusive em partes que não seriam utilizadas.</p>
+<p>Por isso, a retomada envolveu uma limpeza significativa da base.</p>
+<p>Código obsoleto foi removido, estruturas deixaram de ser utilizadas e partes que não pertenciam às funcionalidades em desenvolvimento foram desativadas ou temporariamente comentadas.</p>
+<p>A intenção não era descartar o trabalho anterior indiscriminadamente. Era separar o que ainda contribuía para a entrega daquilo que consumiria esforço sem aproximar a equipe do resultado.</p>
+<p>Duas das primeiras alterações documentadas registraram a remoção de mais de duas mil linhas de código legado, incluindo componentes, rotas e outros arquivos que já não serviam ao novo direcionamento.</p>
+<p>Com uma base mais enxuta e um design atualizado, o projeto poderia ser reorganizado em torno do que a ONG realmente precisava apresentar e disponibilizar.</p>
+<p><strong>O progresso não estava na quantidade de código preservado ou produzido, mas na capacidade de aproximar o projeto de um site funcional.</strong></p></div><figure class="evidence"><h3 class="evidence__label">Redução de código legado — PRs #49 e #50</h3><div class="prose"><p><strong>2.074 linhas removidas</strong></p>
+<p>Remoção documentada nos PRs #49 e #50, abrangendo código e estruturas que não faziam mais parte da direção adotada para o projeto.</p>
+<p><a class="link link--underline-thin" href="https://github.com/Projeto-FrontEnd-Fusion/Aceve-website-development">Consultar o repositório no GitHub</a></p></div></figure></div></section>
+<section class="chapter chapter--charcoal" data-navbar-theme="charcoal" aria-labelledby="capitulo-03"><div class="chapter__content"><h2 class="chapter__title" id="capitulo-03"><span class="chapter__number" aria-hidden="true">03</span>Recrutar desenvolvedores era só o começo. Precisávamos trabalhar na mesma direção.</h2><div class="prose"><p>Para executar a retomada, recrutei os desenvolvedores que formariam a equipe do projeto na Frontend Fusion.</p>
+<p>Reunir pessoas, porém, não bastava. Elas tinham experiências técnicas diferentes e precisavam trabalhar sobre o mesmo produto, compartilhando decisões e integrando suas entregas.</p>
+<p>Minha preocupação era evitar que cada integrante simplesmente desenvolvesse uma parte isolada, sem considerar como ela se conectaria ao restante da aplicação.</p>
+<p>Passamos a orientar o desenvolvimento por histórias de usuário, dando prioridade às mudanças necessárias para concluir cada experiência.</p>
+<p>Isso significava definir o comportamento esperado, dividir a história em tarefas menores, identificar dependências e estabelecer o que precisaria ser desenvolvido e verificado.</p>
+<p>Também significava deixar de lado funcionalidades e trechos de código que não faziam parte da história em andamento.</p>
+<p>Em vez de tentar avançar simultaneamente em todas as partes do projeto, a equipe poderia concentrar seus esforços em mudanças que contribuíssem para uma mesma entrega.</p>
+<p>O fluxo de doação por Pix é um exemplo.</p>
+<p>A necessidade de permitir uma doação envolvia mais do que colocar um botão na tela. Era preciso preservar o valor escolhido pela pessoa durante a navegação, gerar as informações de pagamento e permitir que o código fosse utilizado ou copiado.</p>
+<p>Detalhei essas necessidades em tarefas técnicas que podiam ser desenvolvidas separadamente, mas precisavam funcionar em conjunto.</p>
+<p>Implementei o armazenamento do valor escolhido utilizando Zustand. Outra integrante desenvolveu a geração e a cópia dos códigos de pagamento, com minha participação na revisão e aprovação da contribuição.</p>
+<p>Cada atividade tinha uma responsabilidade própria, mas todas precisavam se conectar à mesma experiência.</p>
+<p><strong>A organização do trabalho permitiu que diferentes pessoas contribuíssem para uma funcionalidade comum, em vez de apenas acumular alterações independentes no repositório.</strong></p></div><figure class="evidence"><h3 class="evidence__label">Etapas do fluxo de doação por Pix</h3><div class="prose"><p><strong>Preservar o valor escolhido</strong><br>Detalhamento da tarefa e implementação do estado compartilhado.</p>
+<p><strong>Gerar os dados de pagamento</strong><br>Desenvolvimento de QR Code, BR Code e opção de cópia por outra integrante.</p>
+<p><strong>Revisar e integrar</strong><br>Verificação da implementação e incorporação das contribuições ao projeto.</p>
+<p>Registros relacionados: tarefa Taiga #61, tarefas #67 e #68 e PRs #54 e #58.</p></div></figure></div></section>
+<section class="chapter" aria-labelledby="capitulo-04"><div class="chapter__content"><h2 class="chapter__title" id="capitulo-04"><span class="chapter__number" aria-hidden="true">04</span>A arquitetura precisava ajudar a equipe, não dificultar seu trabalho.</h2><div class="prose"><p>A reorganização do código trouxe outra questão: como estruturar a aplicação para que diferentes pessoas conseguissem desenvolver sem criar novas dificuldades de integração?</p>
+<p>A pasta de componentes havia crescido, e a distinção entre elementos específicos de uma funcionalidade e elementos compartilhados não estava suficientemente clara.</p>
+<p>Em vez de determinar uma arquitetura sozinho, levei o problema para discussão com o time.</p>
+<p>Consultei integrantes com mais experiência em Next.js, pesquisei alternativas, comparei propostas e incorporei sugestões à decisão.</p>
+<p>A estrutura adotada passou a organizar partes da aplicação por funcionalidades, mantendo separadamente os componentes e recursos compartilhados.</p>
+<p>Essa organização ajudava a tornar mais explícito onde uma mudança deveria acontecer, o que poderia ser reutilizado e quais dependências precisavam ser respeitadas.</p>
+<p>A refatoração também envolveu a documentação da arquitetura, a padronização de estilos e a comunicação das mudanças para os demais desenvolvedores.</p>
+<p>O mesmo cuidado apareceu quando novas dependências passaram a fazer parte do ambiente de desenvolvimento.</p>
+<p>Com a introdução do PostgreSQL, preparei configurações com Docker e Docker Compose e documentei como executar a aplicação e o banco de dados localmente. A equipe recebeu orientações sobre dependências, variáveis de ambiente e atualização das próprias branches.</p>
+<p>Essas decisões não eram apenas escolhas de organização do código.</p>
+<p>Elas afetavam diretamente a facilidade com que os integrantes conseguiriam compreender o projeto, começar uma tarefa e integrar suas alterações ao trabalho de outras pessoas.</p>
+<p><strong>Uma arquitetura útil precisava ser compreensível e utilizável por quem desenvolveria o produto, não apenas por quem a propôs.</strong></p></div><figure class="evidence"><h3 class="evidence__label">Síntese da decisão de arquitetura</h3><div class="prose"><p><strong>Problema:</strong> componentes e responsabilidades pouco organizados dificultavam a navegação e o reaproveitamento.</p>
+<p><strong>Decisão:</strong> estrutura orientada a funcionalidades, com separação entre código específico e recursos compartilhados.</p>
+<p><strong>Implementação:</strong> refatoração documentada no PR #61, com alterações em 31 arquivos e comunicação das orientações de adoção à equipe.</p></div></figure></div></section>
+<section class="chapter chapter--forest" data-navbar-theme="forest" aria-labelledby="capitulo-05"><div class="chapter__content"><h2 class="chapter__title" id="capitulo-05"><span class="chapter__number" aria-hidden="true">05</span>Meu trabalho também era preparar o time para continuar sem depender de mim.</h2><div class="prose"><p>Durante boa parte do projeto, participei diretamente do desenvolvimento, das decisões técnicas e da revisão das contribuições.</p>
+<p>Mas minha disponibilidade para acompanhar a equipe diminuiu com o tempo.</p>
+<p>Isso criou uma necessidade que ia além de concluir tarefas: os desenvolvedores precisavam ganhar autonomia para avaliar o trabalho uns dos outros e tomar decisões de aprovação com critérios compartilhados.</p>
+<p>Passei a dedicar atenção à orientação do time sobre o processo de revisão.</p>
+<p>A revisão de código não deveria se limitar a verificar se uma alteração compilava ou se a tela parecia correta.</p>
+<p>Era necessário conferir se a implementação atendia aos requisitos, respeitava o design, funcionava em diferentes tamanhos de tela, preservava aspectos de acessibilidade e não introduzia problemas de integração.</p>
+<p>Também era importante aprender a distinguir uma correção necessária para aprovar a entrega de uma melhoria que poderia ser planejada posteriormente.</p>
+<p>Um exemplo documentado foi a revisão de uma contribuição com problemas de interação, alinhamento e acessibilidade.</p>
+<p>Solicitei alterações, acompanhei quatro commits corretivos e reavaliei o resultado antes de aprovar a integração.</p>
+<p>Esse tipo de acompanhamento servia tanto para melhorar a contribuição quanto para tornar os critérios de qualidade mais claros para quem participava do projeto.</p>
+<p>Conforme minha disponibilidade diminuía, procurei transferir esse conhecimento e incentivar os desenvolvedores a assumir maior responsabilidade pelas revisões e aprovações.</p>
+<p><strong>O objetivo não era continuar sendo a pessoa que precisava conferir tudo. Era ajudar a equipe a desenvolver a capacidade de conferir, discutir e aprovar o próprio trabalho.</strong></p></div><figure class="evidence"><h3 class="evidence__label">Participação nas revisões e ciclo do PR #38</h3><div class="prose"><p><strong>21 de 22</strong></p>
+<p>Pull requests mesclados de outros integrantes que passaram pela minha revisão no ciclo documentado.</p>
+<p><strong>PR #38 — Um ciclo completo de revisão</strong></p>
+<p>Pedido de mudanças → quatro commits corretivos → reavaliação → aprovação.</p>
+<p><a class="link link--paper link--underline-thin" href="https://github.com/Projeto-FrontEnd-Fusion/Aceve-website-development">Consultar as contribuições no GitHub</a></p></div></figure></div></section>
+<section class="chapter" aria-labelledby="capitulo-06"><div class="chapter__content"><h2 class="chapter__title" id="capitulo-06"><span class="chapter__number" aria-hidden="true">06</span>O projeto saiu do repositório e ganhou um endereço próprio.</h2><div class="prose"><p>O resultado do trabalho coletivo foi um site institucional publicado para a Associação Cultural e Educacional Violeta Eliz.</p>
+<p>A organização passou a contar com um endereço público que apresenta sua história, suas iniciativas e caminhos para quem deseja contribuir.</p>
+<p>O site reúne informações sobre a associação e seus projetos, além de oferecer acesso a opções de doação e participação voluntária.</p>
+<p>Para a Violeta Eliz, a entrega representou a concretização de uma necessidade que havia motivado o projeto: ter uma presença institucional própria para apresentar seu trabalho ao público.</p>
+<p>Para a equipe de desenvolvimento, o caminho até essa entrega envolveu reconstruir parte da base, redefinir o design, organizar histórias, discutir arquitetura, desenvolver funcionalidades, revisar contribuições e integrá-las.</p>
+<p>Os registros do ciclo associado à minha atuação mostram a dimensão desse trabalho coletivo.</p></div><div class="prose"><h3 class="prose__heading">Resultados documentados</h3><p><strong>7 pessoas</strong><br>Contribuíram com pull requests no ciclo analisado.</p>
+<p><strong>39 pull requests</strong><br>Foram abertos durante o período.</p>
+<p><strong>36 pull requests</strong><br>Foram incorporados ao projeto.</p>
+<p><strong>14 pull requests</strong><br>Foram abertos por mim e incorporados.</p>
+<p><strong>21 de 22</strong><br>Pull requests mesclados dos demais integrantes passaram pela minha revisão.</p></div><div class="prose"><h3 class="prose__heading">O que este caso demonstra</h3><p>Minha atuação não se resumiu ao desenvolvimento de páginas ou funcionalidades.</p>
+<p>Recrutei e coordenei pessoas, participei de decisões arquiteturais, organizei a execução por histórias, desenvolvi partes do produto e acompanhei o trabalho de outros integrantes até sua integração.</p>
+<p>Quando minha disponibilidade diminuiu, também trabalhei para que a equipe tivesse critérios e conhecimento para assumir mais responsabilidades sobre a qualidade das entregas.</p>
+<p>O site publicado é resultado do trabalho conjunto dessas pessoas, e não de uma implementação individual.</p>
+<p>Minha contribuição foi ajudar a criar as condições para que esse trabalho coletivo avançasse: transformar uma necessidade em tarefas executáveis, conectar decisões, orientar o desenvolvimento e reduzir a dependência de uma única pessoa.</p>
+<p><strong>O projeto não precisava apenas de mais desenvolvedores escrevendo código. Precisava de uma equipe capaz de transformar trabalho em entrega.</strong></p></div><div class="prose"><h3 class="prose__heading">Produto entregue</h3><p><strong>Site institucional da Associação Cultural e Educacional Violeta Eliz</strong></p>
+<p><a class="link link--underline-thin" href="https://violetaeliz.org.br/">Conhecer o site publicado</a></p>
+<p><a class="link link--underline-thin" href="https://github.com/Projeto-FrontEnd-Fusion/Aceve-website-development">Explorar o repositório do projeto</a></p></div></div></section>
+<section class="chapter chapter--slate" data-navbar-theme="slate" aria-labelledby="conversa-titulo">
+<h2 class="chapter__title" id="conversa-titulo">Sua equipe trabalha, mas o projeto não sai do lugar?</h2>
+<p class="chapter__lead">Ter pessoas, tarefas e código produzido nem sempre é suficiente para chegar a uma entrega.</p>
+<p class="chapter__lead">Posso ajudar a organizar prioridades, estruturar o desenvolvimento, alinhar decisões técnicas e criar um fluxo de trabalho em que as contribuições realmente avancem o projeto.</p>
+<div class="chapter__actions"><a class="link link--button link--button-inverted-themed" href="/#contato">Conte o que está acontecendo →</a><a class="link link--paper link--underline-from-left link--underline-thin" href="/#casos">Voltar aos casos selecionados</a></div></section>
+</main>
     <footer class="footer">
       <div class="footer__main">
         <a class="link" href="/" aria-label="EUZEBIO — início"><img class="footer__wordmark" src="/assets/brand/wordmark-warm-paper.png" alt="EUZEBIO" width="234" height="24"></a>

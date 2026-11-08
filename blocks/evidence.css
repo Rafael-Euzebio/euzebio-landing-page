@@ -1,8 +1,8 @@
 .evidence {
   padding: 2rem;
-  border: 1px solid var(--color-paper-border);
-  background-color: var(--color-paper-warm);
-  color: var(--color-charcoal-deep);
+  border: 1px solid var(--theme-foreground, var(--color-charcoal-deep));
+  background-color: var(--theme-background, var(--color-paper-warm));
+  color: var(--theme-foreground, var(--color-charcoal-deep));
 }
 
 .evidence__label {
@@ -34,5 +34,42 @@
 @media (max-width: 40em) {
   .evidence {
     padding: 1rem;
+  }
+}
+
+.evidence--compact {
+  width: 100%;
+  max-width: 40rem;
+}
+
+.evidence--unframed {
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  color: inherit;
+}
+
+.evidence--centered {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.evidence__viewport {
+  overflow-x: auto;
+}
+
+.evidence__image--readable {
+  min-width: 32rem;
+}
+
+.evidence__hint {
+  display: none;
+}
+
+@media (max-width: 40em) {
+  .evidence__hint {
+    display: block;
+    margin-top: 0.75rem;
+    font-size: var(--font-size-small);
   }
 }

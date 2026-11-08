@@ -1,0 +1,10 @@
+.mermaid-diagram {
+  overflow-x: auto;
+}
+
+.mermaid-diagram__source {
+  display: flex;
+  justify-content: center;
+  min-width: 32rem;
+  margin: 0;
+}
