@@ -21,7 +21,6 @@
   position: relative;
   z-index: 0;
   color: var(--color-slate-blue);
-  white-space: nowrap;
 }
 
 .hero__title-key-phrase::before {
