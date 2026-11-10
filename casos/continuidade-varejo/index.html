@@ -78,9 +78,8 @@
           <div class="study-intro__content">
             <p class="study-intro__eyebrow">ESTUDO DE CASO · OPERAÇÃO E TECNOLOGIA</p>
             <h1 class="study-intro__title" id="caso-titulo">O sistema falhava. A loja não podia esperar.</h1>
-            <p class="study-intro__lead">Em maio de 2026, uma unidade de varejo enfrentava problemas no sistema de vendas. O supervisor relatou que havia aproximadamente <strong>R$ 9 mil em pedidos já realizados aguardando lançamento</strong>. A equipe precisava manter os registros em dia, mas a comunicação entre os equipamentos não funcionava como deveria.</p>
-<p class="study-intro__lead">O fornecedor do sistema apontava para problemas na infraestrutura local, sem assumir os ajustes necessários. Ao mesmo tempo, parte das configurações dos terminais dependia de acesso controlado pelo próprio fornecedor.</p>
-<p class="study-intro__lead">Entrei para investigar o que estava impedindo a operação de funcionar. O atendimento acabou abrindo caminho para outros dois serviços, realizados nos meses seguintes, cada um exigindo uma solução diferente.</p>
+            <p class="study-intro__lead">Em maio de 2026, o supervisor de uma loja relatou aproximadamente <strong>R$ 9 mil em pedidos já realizados aguardando lançamento</strong>. O sistema de vendas falhava, e fornecedor e equipe local controlavam partes diferentes da solução.</p>
+<p class="study-intro__lead">Entrei para investigar as dependências entre servidor, terminais e rede. O resultado abriu caminho para outros dois atendimentos nos meses seguintes: sintomas semelhantes, mas condições e causas que exigiram decisões próprias.</p>
           </div>
           <figure class="study-intro__visual"><img class="study-intro__image" src="/assets/cases/checkout-payment-interrupted.png" alt="Ilustração de uma compra interrompida por uma falha no terminal de vendas." width="1672" height="941"></figure>
         </div>
@@ -95,37 +94,22 @@
       <section class="chapter chapter--charcoal" data-navbar-theme="charcoal" aria-labelledby="capitulo-01">
         <div class="chapter__content">
           <h2 class="chapter__title" id="capitulo-01"><span class="chapter__number" aria-hidden="true">01</span>A loja tinha pedidos. Faltava uma solução.</h2>
-          <div class="prose">
-<p>Para quem trabalha no varejo, uma falha no sistema não é um problema isolado de tecnologia. Ela afeta o atendimento, o registro de pedidos e a capacidade da equipe de manter o controle do que acontece na loja.</p>
-<p>Na primeira unidade, o supervisor relatava que havia passado o dia enfrentando dificuldades com o sistema. Quando saiu, aproximadamente R$ 9 mil em pedidos já realizados ainda precisavam ser lançados para que os registros não ficassem desorganizados.</p>
-<p>O pedido inicial parecia simples: estabilizar o endereço de rede da máquina principal. Mas havia um impasse.</p>
-<p>O suporte do sistema tratava a configuração da rede local como responsabilidade de terceiros. Por outro lado, a loja não tinha acesso livre a todas as configurações dos terminais, que continuavam sob controle do fornecedor.</p>
-<p>Na prática, cada parte tinha responsabilidade sobre um pedaço da solução, mas a loja continuava enfrentando o problema inteiro.</p>
-<p>A possibilidade de trocar de sistema chegou a ser considerada pelo supervisor. Porém, migrar cadastros e atividades de várias unidades exigiria uma transição trabalhosa. Não resolveria a urgência daquele atendimento.</p>
-<p><strong>Era preciso encontrar uma solução possível com os recursos e acessos disponíveis, sem transformar a dificuldade técnica em mais uma interrupção para a loja.</strong></p>
-          </div>
-
+<div class="prose">
+<p>O pedido inicial parecia simples: estabilizar o endereço de rede da máquina principal. O suporte atribuía o problema à infraestrutura local, mas parte das configurações dos terminais permanecia sob acesso controlado pelo próprio fornecedor.</p>
+<p>A loja precisava coordenar responsabilidades separadas enquanto os pedidos se acumulavam. O supervisor chegou a considerar a troca de sistema; migrar cadastros e atividades de várias unidades, porém, exigiria uma transição trabalhosa e não atenderia à urgência.</p>
+<p>Meu ponto de partida foi identificar o que podia ser alterado remotamente, quais acessos estavam disponíveis e o que dependeria de outras pessoas. <strong>Era preciso construir uma solução possível sem interromper ainda mais a operação.</strong></p>
+</div>
         </div>
       </section>
 
       <section class="chapter" aria-labelledby="capitulo-02">
         <div class="chapter__content">
           <h2 class="chapter__title" id="capitulo-02"><span class="chapter__number" aria-hidden="true">02</span>Antes de corrigir, precisei entender como tudo se conectava.</h2>
-          <div class="prose">
-<p>O primeiro passo foi reconstruir a relação entre os equipamentos.</p>
-<p>O sistema de vendas utilizava uma máquina principal que também desempenhava a função de servidor local. Os demais terminais dependiam dela para acessar os serviços necessários às operações.</p>
-<p>Isso tornava o endereço do servidor especialmente importante: os terminais precisavam saber onde encontrá-lo para estabelecer a comunicação.</p>
-<p>Consultei a documentação do software, examinei as configurações disponíveis e identifiquei quais alterações poderiam ser feitas sem depender de acesso às áreas protegidas do sistema.</p>
-<p>O equipamento de rede não disponibilizava, na interface acessível, o mecanismo de reserva de endereço que seria uma alternativa conveniente. Era necessário encontrar outro caminho.</p>
-<p>Configurei um endereço estático para o servidor fora da faixa automática utilizada pela rede e registrei os parâmetros para consulta.</p>
-<p>A mudança estabilizava a referência utilizada para alcançar a máquina principal, mas ainda havia uma etapa que dependia do fornecedor: ajustar a configuração interna dos terminais para utilizar esse endereço.</p>
-<p>Em vez de deixar a solução parada nessa dependência, repassei as informações à equipe da loja, que coordenou o ajuste complementar com o técnico responsável pelo software.</p>
-<p>O trabalho exigiu tanto uma decisão técnica quanto a organização das responsabilidades necessárias para concluir a intervenção.</p>
-<p><strong>A solução não precisava acontecer inteiramente sob o controle de uma única pessoa. Precisava chegar ao resultado.</strong></p>
-          </div>
-          <figure class="evidence">
+<div class="prose">
+<p>Ao examinar o ambiente e a documentação do software, identifiquei que a máquina principal também era o servidor local: concentrava o sistema e o banco de dados acessados pelos terminais. Seu endereço precisava permanecer estável para que eles a encontrassem.</p>
+</div><figure class="evidence">
             <h3 class="evidence__label">Mapa de dependências</h3>
-            <p class="comparison__text">O servidor local concentrava os serviços dos quais os terminais dependiam. A estabilidade da comunicação exigia uma referência de rede consistente e configurações compatíveis entre as partes.</p>
+
             <div class="mermaid-diagram" tabindex="0" role="region" aria-label="Mapa de dependências">
               <pre class="mermaid-diagram__source">flowchart TB
     accTitle: A rede que sustenta uma venda
@@ -137,73 +121,54 @@ Sistema + banco de dados`"] --- rede["Rede da loja"]
     rede --- terminal3["Terminal"]</pre>
             </div>
             <figcaption class="evidence__caption">O endereço do servidor conecta toda a operação.</figcaption>
-          </figure>
+          </figure><div class="prose">
+<p>O equipamento de rede não oferecia reserva de endereço na interface acessível. Escolhi configurar um endereço estático no servidor, fora da faixa distribuída automaticamente aos demais dispositivos, e registrei os parâmetros.</p>
+<p>Ainda faltava apontar os terminais para esse endereço, em uma área protegida do software. Repassei os dados à equipe da loja, que coordenou o ajuste com o técnico do fornecedor. A intervenção combinou uma configuração compatível com os acessos disponíveis e a organização de quem precisava concluir cada parte.</p>
+</div>
         </div>
       </section>
 
       <section class="chapter chapter--forest" data-navbar-theme="forest" aria-labelledby="capitulo-03">
         <div class="chapter__content">
           <h2 class="chapter__title" id="capitulo-03"><span class="chapter__number" aria-hidden="true">03</span>O melhor retorno foi outra loja pedindo ajuda.</h2>
-          <div class="prose">
-<p>Meses depois, recebi a confirmação que faltava.</p>
-<p>Em agosto, o supervisor informou que o sistema continuava funcionando normalmente após a intervenção de maio, inclusive quando havia interrupções de energia.</p>
-<p>A confiança no resultado levou a uma indicação: o gerente de outra unidade estava enfrentando problemas semelhantes e entrou em contato comigo.</p>
-<p>A nova loja relatava perdas recorrentes de comunicação nos terminais de pré-venda. O suporte novamente apontava para a necessidade de estabilizar o endereço da máquina principal, mas não realizava o ajuste.</p>
-<p>O sintoma era familiar. A causa e as condições do ambiente ainda precisavam ser verificadas.</p>
-<p>Durante a investigação remota, identifiquei quais máquinas desempenhavam as funções de terminal e servidor, examinei os serviços em execução e confirmei a comunicação utilizada pelo sistema.</p>
-<p>A descoberta decisiva estava na configuração do roteador: a faixa de distribuição automática de endereços abrangia praticamente toda a rede, incluindo o endereço já utilizado pelo servidor.</p>
-<p>Simplesmente configurar esse endereço como estático no computador manteria a possibilidade de conflito com outros dispositivos.</p>
-<p>Havia outro obstáculo: alterar o endereço para um novo valor exigiria modificar configurações dos terminais que dependiam do fornecedor.</p>
-<p>A solução foi preservar o endereço que os terminais já conheciam e <strong>retirá-lo da faixa de distribuição automática da rede</strong>.</p>
-<p>Dessa forma, o servidor passou a utilizar um endereço estável, enquanto os demais equipamentos continuaram recebendo endereços normalmente. Os terminais puderam manter suas configurações existentes.</p>
-<p>Após a intervenção, pedi à equipe que realizasse uma operação de venda e verificasse a impressão.</p>
-<p>O teste foi concluído com sucesso.</p>
-<p>Não bastava que a conexão de rede estivesse tecnicamente correta. <strong>Era necessário confirmar que a atividade da loja havia voltado a funcionar.</strong></p>
-          </div>
-          <figure class="evidence"><h3 class="evidence__label">Endereço do servidor — antes e depois</h3><div class="comparison"><div class="comparison__side"><p class="comparison__text"><strong>Antes:</strong> o endereço utilizado pelo servidor também estava incluído na faixa de distribuição automática, criando risco de conflito.</p></div><div class="comparison__side"><p class="comparison__text"><strong>Depois:</strong> o servidor manteve o endereço conhecido pelos terminais, mas fora da faixa distribuída aos demais dispositivos.</p></div></div></figure>
+<div class="prose">
+<p>Em agosto, o supervisor confirmou que o sistema continuava funcionando após a intervenção de maio, inclusive depois de interrupções de energia. A confiança no resultado levou à indicação para outra unidade, onde os terminais de pré-venda perdiam a comunicação.</p>
+<p>O suporte também recomendava estabilizar o endereço da máquina principal, sem executar o ajuste. Antes de repetir a configuração, investiguei remotamente as funções dos equipamentos, os serviços em execução e a comunicação utilizada pelo sistema.</p>
+<p>A descoberta estava no roteador: a distribuição automática abrangia praticamente toda a rede, incluindo o endereço já usado pelo servidor. Fixá-lo apenas no computador manteria o risco de conflito; escolher outro exigiria alterar os terminais com acesso do fornecedor.</p>
+<p>Decidi <strong>preservar o endereço conhecido pelos terminais e retirá-lo da faixa automática</strong>. Assim, a mudança resolvia o risco sem acrescentar aquela dependência ao atendimento.</p>
+</div><figure class="evidence"><h3 class="evidence__label">Endereço do servidor — antes e depois</h3><div class="comparison"><div class="comparison__side"><p class="comparison__text"><strong>Antes:</strong> o endereço utilizado pelo servidor também estava incluído na faixa de distribuição automática, criando risco de conflito.</p></div><div class="comparison__side"><p class="comparison__text"><strong>Depois:</strong> o servidor manteve o endereço conhecido pelos terminais, mas fora da faixa distribuída aos demais dispositivos.</p></div></div></figure><div class="prose">
+<p>Depois do ajuste, a equipe concluiu uma venda e confirmou a impressão. A validação alcançou a atividade que precisava voltar a funcionar, além da conexão entre os equipamentos.</p>
+</div>
         </div>
       </section>
 
       <section class="chapter" aria-labelledby="capitulo-04">
         <div class="chapter__content">
           <h2 class="chapter__title" id="capitulo-04"><span class="chapter__number" aria-hidden="true">04</span>Em setembro, o problema era outro. A investigação também.</h2>
-          <div class="prose">
-<p>Um terceiro atendimento, realizado em Guarulhos, apresentou uma situação diferente.</p>
-<p>Dois terminais haviam perdido a comunicação com o sistema de vendas. Desta vez, o problema identificado não estava apenas na relação entre o endereço do servidor e a rede.</p>
-<p>O serviço responsável pela comunicação do sistema estava parado.</p>
-<p>Restabeleci o serviço e os dois terminais voltaram a funcionar normalmente.</p>
-<p>Mas a intervenção não terminou no reinício.</p>
-<p>Para reduzir a dependência de uma nova ação manual diante da mesma falha, configurei mecanismos adicionais:</p>
-<ul><li><strong>Reinício automático do serviço</strong>, caso ele voltasse a parar.</li><li><strong>Verificação automática a cada cinco minutos</strong>, para acompanhar seu estado.</li><li><strong>Reserva do endereço do servidor</strong>, preservando a referência utilizada pelos terminais.</li><li><strong>Orientações simples de conferência</strong>, para que a equipe soubesse verificar a condição do serviço se o problema reaparecesse.</li></ul>
-<p>Nos atendimentos anteriores, a prioridade havia sido estabilizar a comunicação entre o servidor e os terminais. Agora, além de restabelecer a operação, era possível preparar uma resposta automática para uma nova parada do serviço.</p>
-<p>A diferença importa porque problemas parecidos, vistos da perspectiva da loja, podem ter causas diferentes.</p>
-<p><strong>Repetir uma configuração não substitui investigar o que realmente parou de funcionar.</strong></p>
-          </div>
-          <figure class="evidence"><h3 class="evidence__label">Fluxo de recuperação do serviço</h3><ol class="flow"><li class="flow__item"><div><p class="flow__title"><strong>Falha identificada:</strong></p><p class="flow__text">serviço de comunicação parado.</p></div></li><li class="flow__item"><div><p class="flow__title"><strong>Recuperação:</strong></p><p class="flow__text">serviço restabelecido e dois terminais novamente operacionais.</p></div></li><li class="flow__item"><div><p class="flow__title"><strong>Medidas adicionais:</strong></p><p class="flow__text">reinício automático, verificação periódica, endereço reservado e orientação de conferência.</p></div></li></ol></figure>
+<div class="prose">
+<p>Em setembro, dois terminais de uma unidade em Guarulhos perderam a comunicação. Desta vez, o serviço responsável por ela estava parado. Restabeleci o serviço e os equipamentos voltaram a operar.</p>
+<p>A causa encontrada permitia preparar uma resposta para uma nova parada, reduzindo a dependência de intervenção manual. Configurei as medidas de continuidade e deixei orientações para a equipe conferir o estado do serviço.</p>
+</div><figure class="evidence"><h3 class="evidence__label">Fluxo de recuperação do serviço</h3><ol class="flow"><li class="flow__item"><div><p class="flow__title"><strong>Falha identificada:</strong></p><p class="flow__text">serviço de comunicação parado.</p></div></li><li class="flow__item"><div><p class="flow__title"><strong>Recuperação:</strong></p><p class="flow__text">serviço restabelecido e dois terminais novamente operacionais.</p></div></li><li class="flow__item"><div><p class="flow__title"><strong>Medidas adicionais:</strong></p><p class="flow__text">reinício automático, verificação a cada cinco minutos, endereço reservado e orientações de conferência.</p></div></li></ol></figure><div class="prose">
+<p>Os três atendimentos partiram de dificuldades parecidas para a loja, mas exigiram verificações próprias. <strong>Repetir uma configuração não substitui investigar o que realmente parou de funcionar.</strong></p>
+</div>
         </div>
       </section>
 
       <section class="chapter chapter--charcoal" data-navbar-theme="charcoal" aria-labelledby="capitulo-05">
         <div class="chapter__content">
           <h2 class="chapter__title" id="capitulo-05"><span class="chapter__number" aria-hidden="true">05</span>O resultado não era uma configuração. Era a operação funcionando.</h2>
-          <div class="prose">
-<p>Os três atendimentos tiveram desafios técnicos diferentes, mas compartilharam a mesma prioridade: identificar o que estava impedindo o trabalho e chegar a uma solução que pudesse ser verificada na própria operação.</p>
-<h3 class="prose__heading">Maio — Recuperação e continuidade</h3>
-<p>A primeira intervenção estabilizou a referência de rede do servidor e viabilizou o ajuste complementar com o fornecedor. Meses depois, o supervisor confirmou que o sistema continuava funcionando, inclusive após quedas de energia.</p>
-<h3 class="prose__heading">Agosto — Correção compatível com o ambiente</h3>
-<p>A segunda intervenção preservou a configuração já utilizada pelos terminais, reorganizou a distribuição de endereços e terminou com uma operação real de venda e impressão validada pela equipe.</p>
+<div class="prose">
+<p>Cada atendimento terminou com uma forma de verificar o resultado na operação:</p>
+</div><div class="prose">
+<h3 class="prose__heading">Maio — Continuidade confirmada</h3>
+<p>O endereço foi estabilizado e o ajuste dos terminais coordenado com o fornecedor. Meses depois, o supervisor confirmou o funcionamento, inclusive após quedas de energia.</p>
+<h3 class="prose__heading">Agosto — Venda e impressão validadas</h3>
+<p>A distribuição da rede foi ajustada mantendo o endereço do servidor e as configurações dos terminais.</p>
 <h3 class="prose__heading">Setembro — Recuperação e resposta automática</h3>
-<p>O terceiro atendimento restabeleceu o serviço de comunicação e os dois terminais afetados. Também deixou configurados mecanismos de reinício, verificação periódica e estabilidade do endereço do servidor.</p>
-<h3 class="prose__heading">O que esses atendimentos demonstram</h3>
-<p>A parte mais visível desse trabalho envolve servidores, redes, serviços e terminais. Mas o problema que precisava ser resolvido era maior do que qualquer um desses componentes.</p>
-<p>Em uma loja, havia pedidos aguardando lançamento. Em outra, os terminais perdiam a comunicação com o servidor. Na terceira, o serviço necessário para essa comunicação havia parado.</p>
-<p>Em todos os casos, foi necessário compreender o ambiente, identificar as dependências relevantes, decidir o que podia ser alterado e verificar se a solução atendia à necessidade real da equipe.</p>
-<p>Também foi preciso lidar com restrições de acesso, fornecedores, pessoas disponíveis na loja e riscos de intervir remotamente em sistemas utilizados durante o expediente.</p>
-<p><strong>Meu papel foi assumir a condução dessa investigação, conectar as partes necessárias e transformar o diagnóstico numa solução funcional.</strong></p>
-<p>Porque, para quem depende da tecnologia todos os dias, resolver o problema não significa apenas encontrar a causa.</p>
-<p><strong>Significa conseguir voltar ao trabalho — e ter mais condições de continuar trabalhando.</strong></p>
-          </div>
-
+<p>O serviço e os dois terminais foram restabelecidos, com medidas para reagir a novas paradas.</p>
+</div><div class="prose">
+<p>Minha contribuição foi conduzir a investigação sob restrições de acesso, conectar equipe e fornecedor e verificar a solução no uso real. <strong>Resolver o problema significava voltar ao trabalho — e ter mais condições de continuar trabalhando.</strong></p>
+</div>
         </div>
       </section>
 
