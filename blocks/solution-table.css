@@ -1,0 +1,22 @@
+.solution-table {
+  overflow-x: auto;
+}
+
+.solution-table:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+.solution-table__table {
+  width: 100%;
+  min-width: 38rem;
+  border-collapse: collapse;
+  text-align: left;
+  line-height: 1.6;
+}
+
+.solution-table__cell {
+  padding: 1.5rem 1rem;
+  border-bottom: 1px solid currentColor;
+  vertical-align: top;
+}

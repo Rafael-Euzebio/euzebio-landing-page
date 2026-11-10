@@ -46,6 +46,14 @@
   min-width: 0;
 }
 
+.study-intro__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem 2rem;
+  margin-top: 2.5rem;
+}
+
 .study-intro__image {
   width: 100%;
   height: auto;

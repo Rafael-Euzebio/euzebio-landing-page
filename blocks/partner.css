@@ -1,0 +1,21 @@
+.partner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 2rem;
+  margin-top: 2.5rem;
+}
+
+.partner__logo {
+  width: 11rem;
+  max-width: 100%;
+  height: auto;
+}
+
+.partner__logo--large {
+  width: 16rem;
+}
+
+.partner__label {
+  font-size: var(--font-size-small);
+}

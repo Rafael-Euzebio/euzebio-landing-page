@@ -9,6 +9,6 @@ if destination.exists():
 destination.mkdir()
 for name in ('index.html', 'reset.css', 'tokens.css', 'style.css', 'sitemap.xml', 'robots.txt'):
     shutil.copy2(root / name, destination / name)
-for name in ('assets', 'blocks', 'casos', 'privacidade'):
+for name in ('assets', 'blocks', 'casos', 'privacidade', 'solucoes'):
     shutil.copytree(root / name, destination / name)
 print(f'Site estático exportado para {destination}')

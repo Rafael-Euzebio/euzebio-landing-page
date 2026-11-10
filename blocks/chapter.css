@@ -21,6 +21,10 @@
   --theme-foreground: var(--color-paper-warm);
 }
 
+.chapter--auto-height {
+  min-height: 0;
+}
+
 .chapter__content {
   display: flex;
   flex-direction: column;
